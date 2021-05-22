@@ -9,8 +9,9 @@
   z-index: 700;
   overflow-y: scroll;
   transform: translateX(100%);
-  transition:  transform .5s;
-  &.open{
+  transition: transform .5s;
+
+  &.open {
     transform: translateX(0);
   }
 
@@ -46,7 +47,8 @@
     padding: 6px;
     right: 45px;
     top: 36px;
-    svg{
+
+    svg {
       width: 100%;
       height: auto;
     }
@@ -105,35 +107,41 @@
   .phone-link {
     font-size: 22px;
   }
-  @include respond-to($sm){
+
+  .field-box {
+    padding-left: 0;
+  }
+
+  @include respond-to($sm) {
     max-width: 100%;
     padding: 50px 30px;
     .btn-close {
       right: 10px;
     }
-    .mob-hide{
+    .mob-hide {
       display: none;
     }
-    .form__footer{
+    .form__footer {
       padding-left: 0;
     }
-    .contact-side-form__footer{
+    .contact-side-form__footer {
 
       flex-wrap: wrap;
       text-align: center;
     }
-    .phone-link{
+    .phone-link {
       margin-right: 20px;
-      &:last-child{
+
+      &:last-child {
         margin-right: 0;
       }
     }
-    .wrap-link{
+    .wrap-link {
 
     }
 
     .form .custom-select,
-    .form .link-presentation{
+    .form .link-presentation {
       width: 40%;
     }
   }

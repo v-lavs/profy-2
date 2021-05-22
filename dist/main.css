@@ -967,6 +967,10 @@ body.modal-open {
   font-size: 22px;
 }
 
+.contact-side-form .field-box {
+  padding-left: 0;
+}
+
 .card-gallery {
   display: block;
   font-size: 16px;

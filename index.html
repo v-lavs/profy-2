@@ -251,7 +251,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-contacts">
+        <section class="section-contacts" id="contacts">
             <div class="container">
 
                 <div class="section__slogan">
@@ -346,15 +346,22 @@
                     <button type="submit" class="btn btn_dark btn_submit">надіслати</button>
 
                     <div class="wrap-link">
-                        <select name="link-brief" class="custom-select form-control">
-                            <option data-display="brief" value="none" hidden="">brief</option>
-                            <option value="1">brief 1</option>
-                            <option value="2">brief 2</option>
-                            <option value="3">brief 3</option>
-                            <option value="4">brief 4</option>
-                        </select>
-
                         <a href="#" class="link-presentation">presentation</a>
+                        <div class="dropdown">
+                            <div class="brief dropdown-bnt"> brif</div>
+
+                            <ul class="link-list dropdown__content">
+                                <li class="dropdown__item">
+                                    <a href="#" class="dropdown__link">Веб сайт</a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="#" class="dropdown__link">Упаковка</a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="#" class="dropdown__link">Логотип</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </form>
@@ -364,7 +371,7 @@
             <a href="tel:+38 073 221 05 86" class="phone-link">+38 073 221 05 86</a>
         </div>
     </div>
-    <footer id="contacts" class="footer">
+    <footer  class="footer">
         <div class="footer_top">
             <div class="social-bar">
                 <a href="#" class="social__link"><span class="hide">Instagram</span>
