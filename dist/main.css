@@ -1714,7 +1714,7 @@ body.modal-open {
 }
 
 .single-project .related-post {
-  padding-bottom: 17%;
+  padding-bottom: 18.5%;
   padding-top: 7%;
   margin: 0 auto;
   width: 90%;
@@ -1729,6 +1729,10 @@ body.modal-open {
   margin-bottom: 36px;
 }
 
+.single-project .card-gallery__title {
+  margin-bottom: 4px;
+}
+
 .single-project .wrap-slider {
   padding: 0 130px;
   position: relative;
@@ -1739,8 +1743,7 @@ body.modal-open {
   margin-bottom: 25px;
 }
 
-.single-project .client,
-.single-project .services {
+.single-project .info-value {
   color: #B0B0B0;
   font-size: 16px;
 }
@@ -1767,12 +1770,12 @@ body.modal-open {
   margin-bottom: 0;
 }
 
-.single-project .block-information .information {
+.single-project .block-information .information-parameter {
   margin-bottom: 4px;
 }
 
 .single-project .article__title {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 400;
   color: #000000;
   margin-bottom: 70px;
@@ -2094,7 +2097,7 @@ body.modal-open {
   }
 
   .single-project .wrap-slider {
-    padding: 0 35px 30px;
+    padding: 0 22px 30px;
   }
 
   .single-project .wrap-slider .swiper-button-prev:before,
@@ -2588,30 +2591,37 @@ body.modal-open {
 
   .single-project .article__title {
     line-height: 1;
-    margin-bottom: 45px;
+    margin-bottom: 25px;
+  }
+
+  .single-project .block-information {
+    width: 100%;
+    font-size: 16px;
+    margin-bottom: 40px;
   }
 
   .single-project .block-information__item {
-    width: 50%;
+    margin-bottom: 15px;
   }
 
-  .single-project .content__heading {
-    font-size: 12px;
-    line-height: 18px;
-    width: 100%;
+  .single-project .block-information .information-parameter {
     margin-bottom: 0;
   }
 
-  .single-project .content__heading p {
-    margin-bottom: 20px;
+  .single-project .info-value {
+    font-size: 13px;
   }
 
-  .single-project .info_mob-visible {
-    color: #B0B0B0;
-    font-size: 12px;
-    line-height: 1.4;
-    display: block;
-    margin-bottom: 7px;
+  .single-project .content__heading {
+    font-size: 16px;
+    line-height: 1.44;
+    width: 100%;
+    margin-bottom: 0;
+    font-weight: 400;
+  }
+
+  .single-project .content__heading p {
+    margin-bottom: 26px;
   }
 
   .single-project .wrap-text {
@@ -2620,6 +2630,15 @@ body.modal-open {
 
   .single-project .card-gallery__body {
     font-size: 13px;
+  }
+
+  .single-project .related-post {
+    padding-bottom: 100px;
+    padding-top: 38px;
+  }
+
+  .single-project .wrap-slider {
+    padding-bottom: 16px;
   }
 }
 
@@ -2710,5 +2729,9 @@ body.modal-open {
     padding: 0;
     margin: -1px;
     overflow: hidden;
+  }
+
+  .single-project .related-post .card-gallery__title {
+    font-size: 13px;
   }
 }
