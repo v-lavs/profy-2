@@ -1,0 +1,57 @@
+.swiper-button-next,
+.swiper-button-prev {
+
+  width: 56px;
+  height: 16px;
+
+  &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    background-image: url('../assets/img/svg/arrow-grey.svg');
+    width: 56px;
+    height: 13px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+
+  &:after {
+    display: none;
+  }
+  @include respond-to($lg){
+    width: 23px;
+    height: 8px;
+    margin-top: -10px;
+    &:before{
+      width: 23px;
+      height: 5px;
+    }
+  }
+}
+
+.swiper-button-prev:before {
+  background-image: url('../assets/img/svg/arrow-left.svg');
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-pagination-bullet {
+  width: 7px;
+  height: 7px;
+  border: 1px solid #000;
+  background-color: transparent;
+  margin: 0 6px!important;
+  &.swiper-pagination-bullet-active {
+    background-color: #000;
+  }
+}

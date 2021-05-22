@@ -1,0 +1,112 @@
+.section-gallery {
+  padding-top: 47px;
+  padding-bottom: 8%;
+  position: relative;
+  .block-logo {
+    margin-bottom: 42px;
+  }
+
+  .logo-link {
+    display: inline-block;
+    margin-right: 92px;
+    vertical-align: middle;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .card-gallery__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -54px;
+  }
+
+  .card-gallery {
+    padding: 0 54px;
+    width: 50%;
+    margin-bottom: 130px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    &_big {
+      width: 100%;
+    }
+
+    &__wrap-thumb {
+      padding-top: 70%;
+      margin-bottom: 26px;
+
+      &_big {
+        padding-top: 57%;
+      }
+    }
+
+    &__body {
+      padding: 0 0 30px;
+    }
+
+    &__text {
+      opacity: .6;
+    }
+
+    &__title {
+      margin-bottom: 0;
+    }
+  }
+
+  @include respond-to($lg){
+    .card-gallery{
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+  @include respond-to($sm){
+    padding-top: 26px;
+    background-color: $white;
+    .block-logo{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 27px;
+    }
+    .logo-link{
+      max-width: 140px;
+      margin-right: 37px;
+      &:last-child{
+        margin-right: 0;
+        max-width: 47px;
+      }
+    }
+    .card-gallery__list{
+      margin: 0;
+    }
+    .card-gallery {
+      width: 100%;
+      padding-left: 0;
+      padding-right: 0;
+      margin-bottom: 70px;
+      &:last-of-type{
+        margin-bottom: 25px;
+      }
+      &__wrap-thumb{
+        margin-bottom: 16px;
+      }
+      &__title{
+        margin-bottom: 0;
+        font-size: 20px;
+      }
+      &__text{
+        font-size: 12px;
+      }
+      &__wrap-thumb,
+      &__wrap-thumb_big{
+        padding-top: 80%;
+      }
+      &__body{
+        padding-left: 0;
+      }
+    }
+  }
+}

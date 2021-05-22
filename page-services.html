@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--    зaкрыть индексацию-->
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="robots" content="noindex">
+    <meta name="yandex" content="none">
+
+    <title>Профи Послуги</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/main.css">
+</head>
+<body>
+
+<div class="backdrop"></div>
+<div class="wrapper">
+    <header class="header header_white">
+        <div class="container">
+
+            <a href="index.html" class="header__logo">
+                <picture>
+                    <source srcset="assets/img/svg/big-logo.svg" media="(max-width: 960px)">
+                    <img src="assets/img/svg/logo-site.svg" alt="Space Cleaning" class="img img-logo">
+                </picture>
+            </a>
+            <div class="lang-switch_mob">
+                <a href="#" class="lang-switch__link lang-switch__link_active">UA</a>
+                <a href="#" class="lang-switch__link">EN</a>
+            </div>
+            <nav class="header__nav">
+                <a href="/" class="header__logo_mob">
+                    <img src="assets/img/svg/big-logo-white.svg" alt="Space Cleaning" class="img img-logo">
+                </a>
+                <button class="btn-close" aria-label="Закрити"></button>
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="page-projects.html" class="menu__link">Проекти</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="page-services.html" class="menu__link">Послуги</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#contacts" class="menu__link">Контакти</a>
+                    </li>
+                </ul>
+                <div class="lang-switch">
+                    <a href="#" class="lang-switch__link lang-switch__link_active">UA</a>
+                    <a href="#" class="lang-switch__link">EN</a>
+                </div>
+                <div class="wrap-link">
+                    <a href="#" class="link-presentation"><span class="mob-hide">Download</span> presentation</a>
+                    <select name="link-brief" class="custom-select form-control">
+                        <option data-display="Download brief" value="none" hidden="">Download brief</option>
+                        <option value="1">brief 1</option>
+                        <option value="2">brief 2</option>
+                        <option value="3">brief 3</option>
+                        <option value="4">brief 4</option>
+                    </select>
+                </div>
+            </nav>
+
+
+            <button type="button" class="btn-burger" aria-label="бургер-меню">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </button>
+        </div>
+
+    </header>
+
+    <main class="main page-services">
+        <section class="section-team">
+            <div class="container">
+                <div class="part part_left">
+                    <div class="section__heading">
+                        <h1 class="section__title"><span>profi </span><span>creative </span><span>group</span></h1>
+                    </div>
+                    <div class="wrap-thumb">
+                        <img src="assets/img/member.jpg" alt="" class="img">
+                    </div>
+                </div>
+                <div class="part part_right">
+                    <div class="section__slogan"># focusing to create</div>
+                    <div class="part__content">
+                        <div class="section__text">
+                            <p>
+                                Команда креативних дизайнерів, які керуються сучасними тендендіями
+                                графічного дизайну. Ми динамічно розвиваємося завжди займаємо лідируючі позиції
+                                у сферіреклами. Провідним нампрямком діяльності нашого агенства є розробка
+                                креативних ідей та стратегій,
+                            </p>
+                        </div>
+                        <a href="#" class="link-presentation">завантажити презентацію</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-services">
+            <button class="contact-btn">
+                <span class="wrap-img-written">
+                    <img src="assets/img/svg/btn-written.svg" alt="" class="img_written">
+                </span>
+            </button>
+            <div class="container" id="triggerBtnSticky">
+                <h2 class="section__title hide">Ми розробляємо:</h2>
+                <div class="accordion" id="accordion">
+                    <div class="panel">
+                        <div class="panel__heading">
+                            <h3 class="panel__title">
+                                Дизайн упаковки <span class="icon">
+                                <img src="assets/img/icon2.png"
+                                     alt=""></span>
+                                <span class="accordion__arrow"></span>
+                            </h3>
+                            <div class="panel__text">
+                                Ми надаємо комплекс послуг з дизайну упаковки. Від створення концепту до розробки
+                                лінійки бренду для різних
+                                ринків та супровідні POS-матеріали для виходу на ринок.
+                            </div>
+                        </div>
+
+                        <div class="panel-collapse">
+                            <div class="panel-collapse__body">
+                                <div class="swiper-slider card-list accordion__slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide card-list__item">
+                                            <h3 class="title">1. Визначення цілей та задач</h3>
+                                            <div class="card__body">
+                                                <p>
+                                                    Першочерговий етап, що полягає
+                                                    в створенні, за участі замовника,
+                                                    максимально детального технічного
+                                                    завдання, а також визначення
+                                                    особливостей та характеру проекту.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide card-list__item">
+                                            <h3 class="title">2. Розробка концепції </h3>
+                                            <div class="card__body">
+                                                <p>
+                                                    На цьому єтапі відбувається
+                                                    реконструкція основних складових
+                                                    ідентичності бренда. Створення
+                                                    нового позиціонування, логотипу,
+                                                    фірмового стилю, зміна комунікації.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel__heading">
+                            <h3 class="panel__title">
+                                UI/UX дизайн web застосунків
+                                <span class="icon"><img src="assets/img/icon4.png" alt=""></span>
+                                <span class="accordion__arrow"></span>
+                            </h3>
+                            <div class="panel__text">
+                                Ми любимо мобільні та веб-застосунки, іміджеві веб-сайти та монобрендові
+                                інтернет-магазини.
+                                Інтуїтивна зрозумілість + емоція = формула, завдяки якій ми закохуємо користувача у ваш
+                                продукт.
+                            </div>
+                        </div>
+                        <div class="panel-collapse">
+                            <div class="panel-collapse__body">
+                                <div class="swiper-slider card-list accordion__slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide card-list__item">
+                                            <h3 class="title">1. Визначення цілей та задач</h3>
+                                            <div class="card__body">
+                                                <p>
+                                                    Першочерговий етап, що полягає
+                                                    в створенні, за участі замовника,
+                                                    максимально детального технічного
+                                                    завдання, а також визначення
+                                                    особливостей та характеру проекту.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide card-list__item">
+                                            <h3 class="title">2. Розробка концепції </h3>
+                                            <div class="card__body">
+                                                <p>
+                                                    На цьому єтапі відбувається
+                                                    реконструкція основних складових
+                                                    ідентичності бренда. Створення
+                                                    нового позиціонування, логотипу,
+                                                    фірмового стилю, зміна комунікації.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide card-list__item">
+                                            <h3 class="title">3. Презентація бачення</h3>
+                                            <div class="card__body">
+                                                <p>
+                                                    Формування презентації та
+                                                    обговорення з замовником
+                                                    запропонованих концепцій.
+                                                    Узгодження та допрацювання
+                                                    деталей обраного напряму.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide card-list__item">
+                                            <h3 class="title">4. Допрацювання обраної концепції</h3>
+                                            <div class="card__body">
+                                                <p>
+                                                    Матеріалізація нової концепції ребрендингу,
+                                                    яка передбачає створення дизайну необхідних
+                                                    носіїв фірмового стилю та брендбука з чітким
+                                                    керівництвом по їх використанню.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel__heading">
+                            <h3 class="panel__title">
+                                Формування бренду
+                                <span class="icon"><img src="assets/img/icon1.png" alt=""></span>
+                                <span class="accordion__arrow"></span>
+                            </h3>
+                            <div class="panel__text">
+                                Розробляємо комплексне рішення для виходу бренду на ринок. Бренд-стратегія, ім’я,
+                                бренд айдентика, простір брендинг всіх точок контакту клієнта
+                                з вашим брендом. Завдяки брендУ набуває нового звучання, залишаючи найсильніші меседжі
+                                та додаючи нові, актуальні ключові повідомлення.
+                            </div>
+                        </div>
+                        <div class="panel-collapse">
+                            <div class="panel-collapse__body">
+                                <div class="swiper-slider card-list accordion__slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide card-list__item">
+                                            <h3 class="title">1. Визначення цілей та задач</h3>
+                                            <div class="card__body">
+                                                <p>
+                                                    Першочерговий етап, що полягає
+                                                    в створенні, за участі замовника,
+                                                    максимально детального технічного
+                                                    завдання, а також визначення
+                                                    особливостей та характеру проекту.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide card-list__item">
+                                            <h3 class="title">2. Розробка концепції </h3>
+                                            <div class="card__body">
+                                                <p>
+                                                    На цьому єтапі відбувається
+                                                    реконструкція основних складових
+                                                    ідентичності бренда. Створення
+                                                    нового позиціонування, логотипу,
+                                                    фірмового стилю, зміна комунікації.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide card-list__item">
+                                            <h3 class="title">3. Презентація бачення</h3>
+                                            <div class="card__body">
+                                                <p>
+                                                    Формування презентації та
+                                                    обговорення з замовником
+                                                    запропонованих концепцій.
+                                                    Узгодження та допрацювання
+                                                    деталей обраного напряму.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide card-list__item">
+                                            <h3 class="title">4. Допрацювання обраної концепції</h3>
+                                            <div class="card__body">
+                                                <p>
+                                                    Матеріалізація нової концепції ребрендингу,
+                                                    яка передбачає створення дизайну необхідних
+                                                    носіїв фірмового стилю та брендбука з чітким
+                                                    керівництвом по їх використанню.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide card-list__item">
+                                            <h3 class="title">5. Підготовка фінальних файлів</h3>
+                                            <div class="card__body">
+                                                <p>
+                                                    Всі необхідні матеріали ми готуємо та
+                                                    передаємо разом з правилами використання,
+                                                    щоб ваш бренд або продукт міг розпочати
+                                                    нове життя якомога раніше.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel__heading">
+                            <h3 class="panel__title">
+                                Сustomer Experience
+                                <span class="icon"><img src="assets/img/icon3.png" alt=""></span>
+                                <span class="accordion__arrow"></span>
+                            </h3>
+                            <div class="panel__text">
+                                Створюємо якісний клієнтський досвід на кожному кроці знайомства споживача з вашим
+                                сервісом.
+                            </div>
+                        </div>
+                        <div class="panel-collapse">
+                            <div class="panel-collapse__body">
+                                <div class="swiper-slider card-list accordion__slider">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide card-list__item">
+                                            <h3 class="title">1. Визначення цілей та задач</h3>
+                                            <div class="card__body">
+                                                <p>
+                                                    Першочерговий етап, що полягає
+                                                    в створенні, за участі замовника,
+                                                    максимально детального технічного
+                                                    завдання, а також визначення
+                                                    особливостей та характеру проекту.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide card-list__item">
+                                            <h3 class="title">2. Розробка концепції </h3>
+                                            <div class="card__body">
+                                                <p>
+                                                    На цьому єтапі відбувається
+                                                    реконструкція основних складових
+                                                    ідентичності бренда. Створення
+                                                    нового позиціонування, логотипу,
+                                                    фірмового стилю, зміна комунікації.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide card-list__item">
+                                            <h3 class="title">3. Презентація бачення</h3>
+                                            <div class="card__body">
+                                                <p>
+                                                    Формування презентації та
+                                                    обговорення з замовником
+                                                    запропонованих концепцій.
+                                                    Узгодження та допрацювання
+                                                    деталей обраного напряму.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide card-list__item">
+                                            <h3 class="title">4. Допрацювання обраної концепції</h3>
+                                            <div class="card__body">
+                                                <p>
+                                                    Матеріалізація нової концепції ребрендингу,
+                                                    яка передбачає створення дизайну необхідних
+                                                    носіїв фірмового стилю та брендбука з чітким
+                                                    керівництвом по їх використанню.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-slide card-list__item">
+                                            <h3 class="title">5. Підготовка фінальних файлів</h3>
+                                            <div class="card__body">
+                                                <p>
+                                                    Всі необхідні матеріали ми готуємо та
+                                                    передаємо разом з правилами використання,
+                                                    щоб ваш бренд або продукт міг розпочати
+                                                    нове життя якомога раніше.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section-contacts" id="contacts">
+            <div class="container">
+
+                <div class="section__slogan">
+                    <p><span class="bold">Задизайнемо?</span></p>
+                    <p>Напишіть нам і ми відповімо вам протягом доби:</p>
+                </div>
+                <div class="address">
+                    <span class="address__item">м. Львів  вул. Залізнична, 56</span>
+                    <a href="tel:+38 097 137 40 04" class="address__item link-phone">+38 097 137 40 04</a>
+                    <a href="tel:+38 073 221 05 86" class="address__item link-phone">+38 073 221 05 86</a>
+                    <span class="address__item">Ми працюємо з 10:00 до 19:00</span>
+                </div>
+                <form action="#" method="post" class="form">
+                    <textarea class="textarea" name="description" cols="62" rows="5"
+                              placeholder="опишіть будь ласка завдання"></textarea>
+                    <div class="field-box">
+                        <div class="form-group">
+                            <label class="hide">Ім’я</label>
+                            <input class="input" type="text" placeholder="Ім’я">
+                        </div>
+                        <div class="form-group">
+                            <label class="hide">телефон</label>
+                            <input class="input" type="text" placeholder="телефон">
+                        </div>
+                        <div class="form-group">
+                            <label class="hide">email</label>
+                            <input class="input" type="text" placeholder="email">
+                        </div>
+                    </div>
+                    <div class="form__footer">
+                        <div class="wrap-btn">
+                            <button type="submit" class="btn btn_dark btn_submit">надіслати</button>
+                        </div>
+
+                        <select name="link-brief" class="custom-select form-control">
+                            <option data-display="brief" value="none" hidden="">brief</option>
+                            <option value="1">brief 1</option>
+                            <option value="2">brief 2</option>
+                            <option value="3">brief 3</option>
+                            <option value="4">brief 4</option>
+                        </select>
+
+                        <a href="#" class="link-presentation">presentation</a>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div class="contact-side-form">
+        <div class="contact-side-form__header">
+            <button type="button" aria-label="Закрити" class="btn-close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke-width="2" stroke="#000000" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke-width="2" stroke="#000000" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <a href="#" class="logo">
+                <img src="assets/img/svg/big-logo.svg" alt="" class="logo__img">
+            </a>
+            <h4 class="contact-side-form__title"><span class="bold">Напишіть нам</span><br>
+                Яку послугу ви бажаєте замовити?</h4>
+        </div>
+        <div class="contact-side-form__body">
+            <form action="#" method="post" class="form">
+                    <textarea class="textarea" name="description" cols="62" rows="5"
+                              placeholder="опишіть будь ласка завдання"></textarea>
+                <div class="field-box">
+                    <div class="form-group">
+                        <label class="hide">Ім’я</label>
+                        <input class="input" type="text" placeholder="Ім’я">
+                    </div>
+                    <div class="form-group">
+                        <label class="hide">телефон</label>
+                        <input class="input" type="text" placeholder="телефон">
+                    </div>
+                    <div class="form-group">
+                        <label class="hide">email</label>
+                        <input class="input" type="text" placeholder="email">
+                    </div>
+                </div>
+                <div class="form__footer">
+                    <button type="submit" class="btn btn_dark btn_submit">надіслати</button>
+
+                    <div class="wrap-link">
+                        <select name="link-brief" class="custom-select form-control">
+                            <option data-display="brief" value="none" hidden="">brief</option>
+                            <option value="1">brief 1</option>
+                            <option value="2">brief 2</option>
+                            <option value="3">brief 3</option>
+                            <option value="4">brief 4</option>
+                        </select>
+
+                        <a href="#" class="link-presentation">presentation</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="contact-side-form__footer">
+            <a href="tel:+38 097 137 40 04" class="phone-link">+38 097 137 40 04</a>
+            <a href="tel:+38 073 221 05 86" class="phone-link">+38 073 221 05 86</a>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer_top">
+            <div class="social-bar">
+                <a href="#" class="social__link"><span class="hide">Instagram</span>
+                    <img class="icon" src="assets/img/svg/insta.svg" alt="">
+                </a>
+                <a href="#" class="social__link"><span class="hide">Youtube</span>
+                    <img class="icon" src="assets/img/svg/youtybe.svg" alt="">
+                </a>
+                <a href="#" class="social__link"><span class="hide">Behance</span>
+                    <img class="icon" src="assets/img/svg/bechance.svg" alt="">
+                </a>
+                <a href="#" class="social__link"><span class="hide">Facebook</span>
+                    <img class="icon" src="assets/img/svg/fb.svg" alt="">
+                </a>
+            </div>
+        </div>
+        <div class="infinity-block">
+            <div class="infinite-line"></div>
+            <div class="infinite-line"></div>
+            <div class="infinite-line"></div>
+            <div class="infinite-line"></div>
+        </div>
+        <div class="copyright">
+            © PROFI Creative Group, 2021.
+        </div>
+    </footer>
+    <div class="popup-wrapper" id="video-popup-wrapper">
+        <button id="close-video-popup" class="close-popup  btn-close"></button>
+        <div class="popup">
+            <video class="video" controls src="assets/video/burgers.mp4" width="900" height="530" id="video">
+                Тег video не підтримується вашим браузером.
+            </video>
+        </div>
+    </div>
+</div>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="dist/main.js"></script>
+</body>
+</html>

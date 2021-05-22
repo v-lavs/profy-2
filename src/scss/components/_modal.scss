@@ -1,0 +1,32 @@
+.popup-wrapper {
+  display: none;
+  max-height: 100%;
+  padding: 40px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1100;
+  align-items: center;
+  justify-content: center;
+ &.active {
+    display: flex;
+  }
+
+  .btn-close{
+    right: 0;
+    top: 0;
+    z-index: 100;
+  }
+}
+.popup {
+  .video {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+}

@@ -1,0 +1,128 @@
+.section-contacts {
+  padding-bottom: 110px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .section__slogan {
+    font-size: 35px;
+    width: 56%;
+    margin-bottom: 86px;
+  }
+
+  .bold {
+    font-size: 90px;
+    line-height: .8;
+    margin-bottom: 35px;
+    display: inline-block;
+  }
+
+  .address {
+    color: $dark-grey;
+    font-size: 20px;
+    line-height: 1.17;
+    padding-top: 36px;
+    padding-left: 36px;
+
+    &__item {
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .link-phone {
+      font-size: 35px;
+      color: $dark;
+      line-height: .8;
+      margin-bottom: 10px;
+    }
+  }
+
+  .form {
+    .field-box {
+      float: right;
+    }
+  }
+
+  @include respond-to($xl) {
+    .section__slogan {
+      font-size: 28px;
+    }
+    .bold {
+      font-size: 70px;
+    }
+  }
+  @include respond-to($lg) {
+    .section__slogan {
+      width: 100%;
+    }
+    .address {
+      order: 1;
+      padding-left: 0;
+      padding-top: 65px;
+      margin: 0 auto;
+    }
+    .form {
+      .field-box {
+        float: none;
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .textarea {
+        width: 100%;
+      }
+
+      &__footer {
+        width: 100%;
+      }
+    }
+  }
+  @include respond-to($sm) {
+    padding-bottom: 63px;
+    .section__slogan {
+      font-size: 17px;
+      margin-bottom: 50px;
+      padding-left: 25px;
+    }
+    .bold {
+      font-size: 45px;
+      margin-bottom: 11px;
+    }
+    .address .link-phone {
+      font-size: 40px;
+    }
+  }
+  @include respond-to($xs) {
+    .section__slogan {
+      padding: 0 20px;
+    }
+    .bold {
+      font-size: 39px;
+    }
+    .address {
+      font-size: 17px;
+      .link-phone {
+        font-size: 37px;
+      }
+    }
+    .form__footer {
+      padding-left: 0;
+    }
+    .wrap-btn {
+      text-align: center;
+      margin-bottom: 66px;
+    }
+    .address{
+      padding-top: 0;
+      margin: 0 5px;
+    }
+    .link-presentation,
+    .custom-select {
+      display: none;
+    }
+
+  }
+}

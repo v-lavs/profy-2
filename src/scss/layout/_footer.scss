@@ -1,0 +1,111 @@
+.footer {
+  padding-bottom: 15px;
+
+  .social-bar {
+    text-align: center;
+    margin-bottom: 43px;
+  }
+
+  .social__link {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-right: 74px;
+    opacity: 1;
+    transition: .35s;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:hover,
+    &:focus {
+      opacity: .4;
+    }
+  }
+
+  .icon {
+    vertical-align: middle;
+  }
+
+  .copyright {
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.81;
+    text-align: center;
+  }
+
+  .infinity-block {
+    margin-bottom: 28px;
+  }
+
+  .infinite-line {
+    background: url(../assets/img/profi1.png) repeat-x;
+    width: 100%;
+    height: 18px;
+    animation: animate 5s linear infinite;
+    margin-bottom: 8px;
+
+    &:nth-child(2) {
+      opacity: .4;
+      animation: animate1 5s linear infinite;
+    }
+
+    &:nth-child(3) {
+      animation: animate2 5s linear infinite;
+    }
+
+    &:nth-child(4) {
+      opacity: .4;
+    }
+  }
+
+  @keyframes animate {
+    0% {
+      background-position: 0 0;
+    }
+
+    100% {
+      background-position: 400px 0;
+    }
+  }
+  @keyframes animate1 {
+    0% {
+      background-position: 25px 0;
+    }
+
+    100% {
+      background-position: 450px 0;
+    }
+  }
+  @keyframes animate2 {
+    0% {
+      background-position: 35px 0;
+    }
+
+    100% {
+      background-position: 250px 0;
+    }
+  }
+  @include respond-to($sm) {
+    .infinite-line{
+      margin-bottom: 0;
+    }
+    .infinity-block{
+      margin-bottom: 14px;
+    }
+    .social-bar{
+      margin-bottom: 26px;
+    }
+  }
+  @include respond-to($xs) {
+    .social-bar{
+      margin-bottom: 26px;
+      display: flex;
+      justify-content: space-around;
+    }
+    .social__link{
+      margin: 0;
+    }
+  }
+}

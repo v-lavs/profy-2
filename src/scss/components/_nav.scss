@@ -1,0 +1,27 @@
+.menu {
+  font-weight: 500;
+  font-size: 50px;
+  text-align: center;
+
+  &__item {
+    position: relative;
+    transition: .35s;
+    text-transform: uppercase;
+    color: $white;
+    line-height: 1.2;
+    margin-bottom: 1.75em;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:hover,
+    &:focus {
+      -webkit-text-stroke: .5px #ffffff;
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

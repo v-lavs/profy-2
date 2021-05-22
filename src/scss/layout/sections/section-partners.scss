@@ -1,0 +1,62 @@
+.section-partners {
+  padding-top: 35px;
+  padding-bottom: 84px;
+
+  .marquee {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+
+    &-body {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      min-width: 100vw;
+    }
+
+    &-line {
+      display: flex;
+      flex-shrink: 0;
+      justify-content: flex-start;
+      width: 200%;
+      padding-bottom: 100px;
+      animation: marquee-anim 20s linear infinite;
+      will-change: transform;
+    }
+  }
+  .partner-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: .5;
+    height: 95px;
+    min-width: 20vw;
+    padding: 0 15px;
+
+    img {
+      display: block;
+      width: auto;
+      max-height: 100%;
+      height: auto;
+    }
+  }
+  @include respond-to($xl){
+    .partner-block img {
+      //max-height: 75%;
+    }
+  }
+  @include respond-to($sm){
+    background-color: $white;
+    .partner-block {
+      height: 60px;
+      min-width: 40vw;
+    }
+  }
+  @include respond-to($xs){
+    padding-top: 34%;
+    .partner-block {
+      min-width: 50vw;
+      height: 50px;
+    }
+  }
+}

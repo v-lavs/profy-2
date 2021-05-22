@@ -1,0 +1,30 @@
+.container {
+  width: 100%;
+  max-width: 1696px;
+  margin: 0 auto;
+  padding: 0 50px;
+  @media  only screen and (max-width: 1661px) {
+    max-width: 1240px;
+    padding: 0 25px;
+  }
+  @include respond-to($xxl) {
+    max-width: 1120px;
+  }
+  @include respond-to($xl) {
+    max-width: 940px;
+  }
+  @include respond-to($lg) {
+    max-width: 720px;
+  }
+  @include respond-to($md) {
+    max-width: 610px;
+  }
+  @include respond-to($sm) {
+    max-width: 460px;
+    padding: 0 25px;
+  }
+  @include respond-to($xs) {
+    max-width: 100%;
+    padding: 0 12px;
+  }
+}

@@ -1,0 +1,70 @@
+.page-projects {
+  .section-gallery {
+    padding-bottom: 6%;
+    background-color: $white;
+
+    .card-gallery__list {
+      margin: 0 -54px;
+    }
+
+    .card-gallery {
+      padding: 0 54px;
+      margin-bottom: 9.25%;
+      width: 50%;
+
+      &__wrap-thumb {
+        padding-top: 79%;
+        margin-bottom: 18px;
+      }
+    }
+
+    .block-logo {
+      display: none;
+    }
+  }
+
+  @include respond-to($lg) {
+    .section-gallery {
+      .block-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 27px;
+      }
+      .logo-link{
+        max-width: 140px;
+        margin-right: 37px;
+        &:last-child{
+          margin-right: 0;
+          max-width: 47px;
+        }
+      }
+      .card-gallery__list{
+        margin: 0 -25px;
+      }
+.card-gallery{
+  padding: 0 25px;
+}
+    }
+  }
+  @include respond-to($sm){
+    .card-gallery__list{
+      margin: 0 -15px;
+    }
+    .card-gallery{
+      padding: 0 15px;
+    }
+  }
+  @include respond-to($xs) {
+    .section-gallery {
+      .card-gallery {
+        width: 100%;
+        margin-bottom: 28px;
+        &__wrap-thumb{
+          margin-bottom: 8px;
+        }
+      }
+    }
+  }
+}
+
