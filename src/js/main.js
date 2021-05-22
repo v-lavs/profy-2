@@ -4,7 +4,6 @@
 
 //= include ../../node_modules/jquery/dist/jquery.js ;
 //= include ../lib/waypoints/index.js
-//= include ../lib/jquery-nice-select-1.1.0/js/jquery.nice-select.js
 
 
 // CUSTOM SCRIPTS
@@ -99,12 +98,12 @@ $(document).ready(function () {
 
     const slideAnimationTime = 500;
 
-    $('#accordion .panel__heading').on('click', function () {
+    $('#accordion .panel__heading, #accordion .accordion__arrow').on('click', function () {
         if ($(this).hasClass('open')) {
             $(this).removeClass('open');
             $(this).siblings('.panel-collapse').slideUp(slideAnimationTime);
         } else {
-            $('#accordion .panel__heading').removeClass('open');
+            $('#accordion .panel__heading, #accordion .accordion__arrow').removeClass('open');
             $(this).addClass('open');
             const $curr = $(this);
 
@@ -208,11 +207,6 @@ $(document).ready(function () {
     });
 
 
-    // CUSTOM SELECT
-
-    $('.custom-select').niceSelect();
-
-
     // POPUP VIDEO
 
     $("#video-modal-trigger").click(function (e) {
@@ -228,14 +222,6 @@ $(document).ready(function () {
         video.get(0).pause();
     });
 
-
-    // lINE ANIMATION
-
-    $('.stroke-anim').waypoint(function (direction) {
-        $(this.element).addClass('anim_active')
-    }, {
-        offset: '35%'
-    });
 
     $(window).resize(function () {
         slidersInit();
@@ -255,6 +241,7 @@ $(document).ready(function () {
             }
         },
     });
+
     //HIDE TEXT
     $('.text-hide .open-up').on('click', function (e) {
         e.preventDefault();

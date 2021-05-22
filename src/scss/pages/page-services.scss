@@ -1,12 +1,13 @@
 .page-services {
   padding-top: 174px;
+
   .accordion {
     .swiper-wrapper {
       flex-wrap: wrap;
     }
 
     .swiper-pagination {
-      bottom: 35px;
+      bottom: 27px;
       padding: 3px;
     }
 
@@ -15,19 +16,19 @@
     }
 
     .card-list {
+      background-color: #f2f6f6;
       &__item {
         width: 33.33%;
         line-height: 1.37;
-        font-size: 16px;
-        color: $dark-grey;
+        font-size: 15px;
+        font-weight: 300;
         padding: 35px 5%;
       }
 
       .title {
-        font-size: 19px;
-        margin-bottom: 14px;
-        color: $dark;
-        text-transform: uppercase;
+        font-weight: 500;
+        font-size: 18px;
+        margin-bottom: 15px;
       }
     }
   }
@@ -35,6 +36,7 @@
   .section-team {
 
     padding-bottom: 116px;
+
     .container {
       display: flex;
     }
@@ -50,6 +52,7 @@
         padding-bottom: 40px;
         padding-top: 26px;
       }
+
       &_left {
         position: relative;
         padding-right: 17px;
@@ -86,16 +89,19 @@
       padding-top: 32px;
       font-size: 19px;
       line-height: 1.74;
-      color: #404040;
+      color: $dark;
       float: left;
+
       .section__title {
         margin-bottom: 80px;
-        span{
+
+        span {
           display: inline-block;
           position: relative;
-          padding-right: 60px;
+          padding-right: .45em;
           z-index: 1;
-          &:before{
+
+          &:before {
             content: '';
             position: absolute;
             bottom: 23%;
@@ -122,7 +128,8 @@
       font-size: 18px;
       padding-left: 27px;
       padding-right: 66px;
-      &:before{
+
+      &:before {
         left: auto;
         right: 21px;
       }
@@ -182,15 +189,23 @@
         margin-bottom: 0;
       }
 
-      .card-list__item {
-        width: 100%;
-        padding: 15px 20px 20px;
-        font-size: 15px;
+      .card-list{
+        position: relative;
+        padding-bottom: 27px;
+        &__item {
+          width: 100%;
+          line-height: 1.9;
+          padding: 25px 20px 43px;
+          font-size: 15px;
+        }
       }
 
       .card__body {
         padding: 0;
       }
+    }
+    .section-services{
+      padding-bottom: 70px;
     }
   }
   @include respond-to($sm) {
@@ -199,7 +214,6 @@
 
       .section__heading,
       .wrap-thumb {
-        float: none;
         width: 100%;
       }
 

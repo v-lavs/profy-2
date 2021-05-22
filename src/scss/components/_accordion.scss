@@ -3,13 +3,7 @@
 
   .accordion__arrow {
     position: absolute;
-    display: flex;
-    width: 24px;
-    height: 13px;
-    top: 50%;
-    right: -24px;
     background-image: url('../assets/img/arrow-down1.png');
-
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -17,6 +11,7 @@
     transform: translateY(-50%);
     transition: transform .5s;
     z-index: 11;
+    cursor: pointer;
   }
 
   .panel {
@@ -25,48 +20,69 @@
     padding-bottom: 80px;
     width: 100%;
 
+    &:before,
     &:after {
       position: absolute;
       content: '';
       display: block;
+      right: 0;
+
+    }
+
+    &:after {
       height: 1px;
-      background-color: #000000;
-      opacity: 0.2;
+      background-color: $yellow;
       left: 0;
       bottom: 0;
-      width: 80%;
+    }
+
+    &:before {
+      background-image: url(../assets/img/svg/corner.svg);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      -webkit-background-size: contain;
+      background-size: contain;
+      bottom: -5px;
+      width: 10px;
+      height: 11px;
     }
 
     &__heading {
-      padding: 0 35px 0 0;
+      display: flex;
+      padding: 0 60px 0 67px;
       transition: .7s;
+      cursor: pointer;
     }
 
     &__title {
       position: relative;
       margin: 0 0 50px 0;
       color: $dark;
-      font-size: 45px;
+      font-size: 40px;
       font-weight: 400;
-      cursor: pointer;
+      flex-grow: 1;
     }
 
     .icon {
-      width: 33px;
-      height: 33px;
-      margin-left: 7.225%;
+      position: absolute;
+      width: 31px;
+      height: 31px;
       display: inline-block;
-      vertical-align: middle;
+      left: -67px;
+      top: 9px;
 
-      img {
+      svg {
+        width: 100%;
+        height: auto;
         display: block;
       }
     }
 
     &__text {
-      font-size: 19px;
-      line-height: 1.32;
-      width: 80%;
+      font-size: 18px;
+      line-height: 1.4;
+      padding-left: 1.25%;
+      width: 60%;
     }
 
     &:first-child {
@@ -83,21 +99,13 @@
     padding: 55px 0 0;
 
     &__body {
-      background-color: $light-grey;
-      padding: 40px 0;
+      background-color: #f2f6f6;
+      padding: 15px 0;
     }
   }
 
-  .open {
-    display: block;
-
-    .panel__text {
-      width: 100%;
-    }
-
-    .accordion__arrow {
-      transform: rotate(-180deg) translateY(50%);
-    }
+  .accordion__arrow {
+    display: none;
   }
 
   @include respond-to($lg) {
@@ -118,26 +126,31 @@
       padding-top: 55px;
       padding-bottom: 95px;
 
+      &:before {
+        display: none;
+      }
+
       .panel-collapse {
         padding-top: 25px;
       }
 
       &__heading {
         padding-right: 0;
+        padding-left: 0;
+        flex-wrap: wrap;
+        padding-bottom: 25px;
       }
 
       &__title {
-        position: static;
         margin-bottom: 35px;
-        display: flex;
-        flex-direction: column-reverse;
         padding-top: 0;
-
+        width: 100%;
+        font-size: 25px;
+        padding-left: 52px;
         .icon {
-          margin-left: 0;
-          width: 30px;
-          height: 30px;
-          margin-bottom: 16px;
+          left: 0;
+          top: 4px;
+
         }
       }
 
@@ -147,15 +160,23 @@
 
       &__text {
         width: 100%;
+        padding: 0;
       }
     }
 
     .accordion__arrow {
-      top: auto;
+      display: block;
       bottom: 35px;
       width: 33px;
       height: 18px;
       left: 0;
+    }
+    .open {
+      display: block;
+
+      .accordion__arrow {
+        transform: rotate(-180deg) translateY(50%);
+      }
     }
   }
 }
