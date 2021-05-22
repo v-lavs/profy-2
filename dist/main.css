@@ -1372,6 +1372,7 @@ body.modal-open {
 
 .page-services {
   padding-top: 174px;
+  position: relative;
 }
 
 .page-services .accordion .swiper-wrapper {
