@@ -909,7 +909,7 @@ body.modal-open {
 }
 
 .contact-side-form .btn-close svg {
-  width: 100%;
+  width: 75%;
   height: auto;
 }
 
@@ -920,7 +920,7 @@ body.modal-open {
 }
 
 .contact-side-form .form .wrap-link,
-.contact-side-form .form__footer,
+.contact-side-form .form .form__footer,
 .contact-side-form .form .field-box,
 .contact-side-form .form .textarea {
   width: 100%;
@@ -946,21 +946,9 @@ body.modal-open {
 
 .contact-side-form .form .wrap-link {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 98px;
-}
-
-.contact-side-form .form .link-presentation {
-  width: 53%;
-}
-
-.contact-side-form .form .custom-select {
-  width: 38%;
-}
-
-.contact-side-form .form .link-presentation:before,
-.contact-side-form .form .nice-select:before {
-  opacity: .4;
 }
 
 .contact-side-form .phone-link {
@@ -2350,10 +2338,6 @@ body.modal-open {
     right: 10px;
   }
 
-  .contact-side-form .mob-hide {
-    display: none;
-  }
-
   .contact-side-form .form__footer {
     padding-left: 0;
   }
@@ -2371,9 +2355,20 @@ body.modal-open {
     margin-right: 0;
   }
 
-  .contact-side-form .form .custom-select,
+  .contact-side-form .form {
+    padding-bottom: 16px;
+  }
+
+  .contact-side-form .form .brief,
   .contact-side-form .form .link-presentation {
-    width: 40%;
+    min-width: 147px;
+    text-align: left;
+    margin-bottom: 16px;
+  }
+
+  .contact-side-form .form .brief:before,
+  .contact-side-form .form .link-presentation:before {
+    left: 10px;
   }
 
   .section-banner .banner__slide .btn {

@@ -49,7 +49,7 @@
     top: 36px;
 
     svg {
-      width: 100%;
+      width: 75%;
       height: auto;
     }
   }
@@ -60,7 +60,7 @@
     padding-bottom: 32px;
 
     .wrap-link,
-    &__footer,
+    .form__footer,
     .field-box,
     .textarea {
       width: 100%;
@@ -86,21 +86,9 @@
 
     .wrap-link {
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
       padding-top: 98px;
-    }
-
-    .link-presentation {
-      width: 53%;
-    }
-
-    .custom-select {
-      width: 38%;
-    }
-
-    .link-presentation:before,
-    .nice-select:before {
-      opacity: .4;
     }
   }
 
@@ -118,14 +106,11 @@
     .btn-close {
       right: 10px;
     }
-    .mob-hide {
-      display: none;
-    }
+
     .form__footer {
       padding-left: 0;
     }
     .contact-side-form__footer {
-
       flex-wrap: wrap;
       text-align: center;
     }
@@ -136,13 +121,21 @@
         margin-right: 0;
       }
     }
-    .wrap-link {
+    .form {
+      padding-bottom: 16px;
 
+      .brief,
+      .link-presentation {
+        min-width: 147px;
+        text-align: left;
+        margin-bottom: 16px;
+      }
+
+      .brief:before,
+      .link-presentation:before {
+        left: 10px;
+      }
     }
 
-    .form .custom-select,
-    .form .link-presentation {
-      width: 40%;
-    }
   }
 }
