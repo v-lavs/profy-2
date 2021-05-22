@@ -17,6 +17,7 @@
 
     .card-list {
       background-color: #f2f6f6;
+
       &__item {
         width: 33.33%;
         line-height: 1.37;
@@ -59,19 +60,11 @@
       }
     }
 
-    .section__title {
-      font-size: 130px;
-      font-weight: 300;
-      line-height: 1.33;
-      color: $dark;
-    }
 
     .section__slogan {
       font-size: 60px;
       font-weight: 400;
       line-height: 1.38;
-
-
       margin-bottom: 36px;
     }
 
@@ -85,15 +78,13 @@
     }
 
     .section__heading {
-      width: 50%;
-      padding-top: 32px;
-      font-size: 19px;
-      line-height: 1.74;
-      color: $dark;
-      float: left;
+      padding-top: 26px;
 
       .section__title {
-        margin-bottom: 80px;
+        font-size: 130px;
+        font-weight: 300;
+        line-height: 1.33;
+        color: $dark;
 
         span {
           display: inline-block;
@@ -107,7 +98,7 @@
             bottom: 23%;
             left: 0;
             width: 100%;
-            height: 7px;
+            height: 12px;
             background-color: $yellow;
             z-index: -1;
           }
@@ -118,6 +109,7 @@
     .wrap-thumb {
       position: absolute;
       right: 26px;
+      top: 0;
       width: 53.8%;
       z-index: -1;
     }
@@ -136,16 +128,29 @@
     }
   }
 
-  @include respond-to($xxl) {
+  .btn-text_mob {
+    display: none;
+  }
+
+
+  @media only screen and (max-width: 1660px) {
     .section-team {
       padding-top: 50px;
 
+      .section__slogan {
+        font-size: 42px;
+      }
+
       .section__heading {
-        padding-top: 0;
+        padding-top: 60px;
+
+        .section__title {
+          font-size: 96px;
+        }
       }
 
       .wrap-thumb {
-        width: 45%;
+        width: 65%;
       }
 
       .section__title {
@@ -153,26 +158,54 @@
       }
     }
   }
-  @include respond-to($xl) {
+  @include respond-to($xxl) {
     .section-team {
-      .section__title {
-        font-size: 48px;
-      }
+      padding-top: 0;
     }
   }
-  @include respond-to($lg) {
+  @include respond-to($xl) {
     .section-team {
+      .part_left {
+        width: 65%;
+      }
+
+      .part_right {
+        width: 35%;
+        padding-left: 45px;
+      }
+
+      .section__slogan {
+        font-size: 28px;
+      }
+    }
+
+  }
+  @include respond-to($lg) {
+    padding-top: 125px;
+    .section-team {
+      .container {
+        flex-wrap: wrap;
+      }
+
       .wrap-thumb {
-        margin-bottom: 36px;
+        width: 58%;
+        right: 0;
+      }
+
+      .part_right,
+      .part_left {
+        width: 100%;
+        padding: 0;
+      }
+
+      .part_left {
+        padding-bottom: 60px;
       }
 
       .section__title {
         font-size: 36px;
       }
 
-      .section__sub-title {
-        font-size: 27px;
-      }
 
       .section__text {
         width: 100%;
@@ -189,9 +222,10 @@
         margin-bottom: 0;
       }
 
-      .card-list{
+      .card-list {
         position: relative;
         padding-bottom: 27px;
+
         &__item {
           width: 100%;
           line-height: 1.9;
@@ -204,50 +238,66 @@
         padding: 0;
       }
     }
-    .section-services{
+    .section-services {
       padding-bottom: 70px;
     }
   }
   @include respond-to($sm) {
     .section-team {
       padding-top: 30px;
+      padding-bottom: 78px;
 
-      .section__heading,
-      .wrap-thumb {
-        width: 100%;
+      .btn-text_mob {
+        display: inline-block;
       }
 
-      .wrap-thumb {
-        margin-left: 0;
-        margin-bottom: 30px;
+      .btn-text_desk {
+        display: none;
       }
 
-      .section__title {
-        font-size: 27px;
-        margin-bottom: 0;
-      }
+      .section__heading {
+        .section__title {
+          font-size: 70px;
 
-      .section__sub-title {
-        font-size: 17px;
-        margin-bottom: 20px;
+          span:before {
+            height: 2px;
+          }
+        }
       }
 
       .section__text {
-        font-size: 17px;
+        font-size: 15px;
         line-height: 26px;
         margin-bottom: 34px;
       }
 
-      .see-more {
-        font-size: 17px;
-        padding-right: 80px;
+      .section__slogan {
+        font-size: 25px;
+        margin-bottom: 6px;
       }
     }
-    .section-partners {
-      padding-bottom: 0;
-    }
-    .section-about {
-      padding-bottom: 130px;
+
+  }
+  @include respond-to($xs) {
+    padding-top: 70px;
+    .section-team {
+      .wrap-thumb {
+        width: 67%;
+        max-width: 224px;
+      }
+
+      .section__heading {
+        padding-top: 50px;
+
+        .section__title {
+          font-size: 70px;
+
+          span:before {
+            height: 2px;
+            left: -.45em;
+          }
+        }
+      }
     }
   }
 }
