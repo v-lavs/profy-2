@@ -259,14 +259,15 @@
                     <p>Напишіть нам і ми відповімо вам протягом доби:</p>
                 </div>
                 <div class="address">
-                    <span class="address__item">м. Львів  вул. Залізнична, 56</span>
+                    <span class="address__item">Ми працюємо з 10:00 до 19:00</span>
                     <a href="tel:+38 097 137 40 04" class="address__item link-phone">+38 097 137 40 04</a>
                     <a href="tel:+38 073 221 05 86" class="address__item link-phone">+38 073 221 05 86</a>
-                    <span class="address__item">Ми працюємо з 10:00 до 19:00</span>
+                    <span class="address__item">м. Львів  вул. Залізнична, 56</span>
+
                 </div>
                 <form action="#" method="post" class="form">
                     <textarea class="textarea" name="description" cols="62" rows="5"
-                              placeholder="опишіть будь ласка завдання"></textarea>
+                              placeholder="Опишіть будь ласка завдання"></textarea>
                     <div class="field-box">
                         <div class="form-group">
                             <label class="hide">Ім’я</label>
@@ -286,12 +287,21 @@
                             <button type="submit" class="btn btn_dark btn_submit">надіслати</button>
                         </div>
                         <a href="#" class="link-presentation">presentation</a>
-                        <select name="link-brief" class="custom-select form-control">
-                            <option data-display="brief" value="none" hidden="">Веб сайт</option>
-                            <option value="1">Веб сайт</option>
-                            <option value="2">Упаковка</option>
-                            <option value="3">Логотип</option>
-                        </select>
+                        <div class="dropdown">
+                            <div class="brief dropdown-bnt"> brif</div>
+
+                            <ul class="link-list dropdown__content">
+                                <li class="dropdown__item">
+                                    <a href="#" class="dropdown__link">Веб сайт</a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="#" class="dropdown__link">Упаковка</a>
+                                </li>
+                                <li class="dropdown__item">
+                                    <a href="#" class="dropdown__link">Логотип</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </form>
             </div>
@@ -302,8 +312,10 @@
         <div class="contact-side-form__header">
             <button type="button" aria-label="Закрити" class="btn-close">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18 6L6 18" stroke-width="2" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M6 6L18 18" stroke-width="2" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M18 6L6 18" stroke-width="2" stroke="#000000" stroke-linecap="round"
+                          stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke-width="2" stroke="#000000" stroke-linecap="round"
+                          stroke-linejoin="round"/>
                 </svg>
             </button>
             <a href="#" class="logo">

@@ -102,10 +102,13 @@
     .social-bar{
       margin-bottom: 26px;
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
+      padding: 0 18px;
     }
     .social__link{
       margin: 0;
+      width: 23px;
+      height: 23px;
     }
   }
 }

@@ -399,10 +399,10 @@ body.modal-open {
   text-align: center;
   transition: .35s;
   border: none;
-  font-size: 20px;
+  font-size: 21px;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
-  padding: 10px 25px 12px;
+  padding: 8px 25px 11px;
   line-height: 1;
 }
 
@@ -560,32 +560,38 @@ body.modal-open {
 }
 
 .form .field-box {
-  max-width: 354px;
-  width: 25%;
+  max-width: 320px;
+  padding-left: 36px;
+  width: 45%;
 }
 
 .form__footer {
   display: flex;
   width: 55%;
-  justify-content: space-between;
 }
 
+.form__footer .wrap-btn {
+  flex-grow: 1;
+}
+
+.brief,
 .link-presentation {
   position: relative;
   font-size: 15px;
   font-weight: 600;
   color: #000000;
   display: block;
-  padding: 10px 18px 13px 63px;
+  padding: 9px 18px 12px 38px;
   border: 1px solid #000000;
   text-align: center;
   min-width: 175px;
+  transition: .35s;
 }
 
+.brief:before,
 .link-presentation:before {
   position: absolute;
   content: '';
-  background-image: url(../assets/img/svg/up-pdf.svg);
   width: 19px;
   height: 20px;
   background-repeat: no-repeat;
@@ -594,6 +600,71 @@ body.modal-open {
   left: 20px;
   bottom: 50%;
   transform: translateY(50%);
+}
+
+.brief:hover,
+.brief:focus,
+.link-presentation:hover,
+.link-presentation:focus {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.brief:hover:before,
+.brief:focus:before,
+.link-presentation:hover:before,
+.link-presentation:focus:before {
+  filter: invert(1);
+}
+
+.brief:before {
+  background-image: url(../assets/img/svg/upload.svg);
+}
+
+.link-presentation:before {
+  background-image: url(../assets/img/svg/up-pdf.svg);
+}
+
+.dropdown {
+  position: relative;
+  margin-left: 68px;
+}
+
+.dropdown:hover .dropdown__content,
+.dropdown:focus .dropdown__content {
+  max-height: 350px;
+  opacity: 1;
+}
+
+.dropdown__content {
+  cursor: pointer;
+  border: 1px solid #000000;
+  color: #000000;
+  position: absolute;
+  background-color: #ffffff;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  font-size: 15px;
+  -webkit-transition: max-height .75s;
+  transition: max-height .75s;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.dropdown__link {
+  padding: 10px 10px 13px;
+  text-align: center;
+  transition: .35s;
+  display: block;
+}
+
+.dropdown__link:hover,
+.dropdown__link:focus {
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .accordion {
@@ -1208,7 +1279,7 @@ body.modal-open {
 }
 
 .section-contacts {
-  padding-bottom: 110px;
+  padding-bottom: 100px;
 }
 
 .section-contacts .container {
@@ -1219,12 +1290,14 @@ body.modal-open {
 
 .section-contacts .section__slogan {
   font-size: 35px;
+  font-weight: 300;
   width: 56%;
   margin-bottom: 86px;
 }
 
 .section-contacts .bold {
-  font-size: 90px;
+  font-size: 100px;
+  font-weight: 400;
   line-height: .8;
   margin-bottom: 35px;
   display: inline-block;
@@ -1234,7 +1307,6 @@ body.modal-open {
   color: #B0B0B0;
   font-size: 20px;
   line-height: 1.17;
-  padding-top: 36px;
   padding-left: 36px;
 }
 
@@ -1354,7 +1426,7 @@ body.modal-open {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: opacity .5s;
+  transition: opacity .8s;
   opacity: 0;
   visibility: hidden;
   z-index: 900;
@@ -1365,6 +1437,7 @@ body.modal-open {
 .header .header__nav.open {
   opacity: .9;
   visibility: visible;
+  transition: .8s;
 }
 
 .header .header__nav .wrap-link {
@@ -1375,8 +1448,8 @@ body.modal-open {
   display: none;
 }
 
-.header_white {
-  background-color: #ffffff;
+.header_white .header__logo {
+  filter: invert(1);
 }
 
 .header_white .btn-burger .line {
@@ -1748,6 +1821,19 @@ body.modal-open {
     right: 30px;
   }
 
+  .form .field-box {
+    width: 35%;
+  }
+
+  .form .textarea,
+  .form .form__footer {
+    width: 65%;
+  }
+
+  .form .dropdown {
+    margin-left: 50px;
+  }
+
   .section-develop .develop__list {
     margin-left: 0;
     margin-right: 0;
@@ -1793,8 +1879,20 @@ body.modal-open {
 }
 
 @media only screen and (max-width: 1200px) {
-  .form .field-box {
-    width: 32%;
+  .form .textarea {
+    margin-bottom: 40px;
+  }
+
+  .form .form__footer {
+    justify-content: space-between;
+  }
+
+  .form .form__footer .wrap-btn {
+    flex-grow: 0;
+  }
+
+  .form .form__footer .dropdown {
+    margin: 0;
   }
 
   .section-develop .section-develop:before {
@@ -1818,7 +1916,7 @@ body.modal-open {
   }
 
   .section-contacts .section__slogan {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   .section-contacts .bold {
@@ -1885,6 +1983,12 @@ body.modal-open {
 @media only screen and (max-width: 980px) {
   .section__title {
     font-size: 60px;
+  }
+
+  .form .field-box {
+    padding-left: 0;
+    width: 100%;
+    margin-bottom: 60px;
   }
 
   .accordion .panel__text {
@@ -2037,6 +2141,12 @@ body.modal-open {
   .dynamic-content img {
     margin-top: 35px;
     margin-bottom: 35px;
+  }
+
+  .brief,
+  .link-presentation {
+    padding-top: 8px;
+    padding-bottom: 10px;
   }
 
   .accordion .panel {
@@ -2202,7 +2312,7 @@ body.modal-open {
   }
 
   .form {
-    font-size: 16px;
+    font-size: 17px;
   }
 
   .form .form__footer {
@@ -2213,34 +2323,19 @@ body.modal-open {
 
   .form .textarea {
     max-height: 54px;
-    margin-bottom: 16px;
-    padding-left: 20px;
+    margin-bottom: 22px;
+    padding-left: 6px;
     font-size: 16px;
   }
 
   .form .input {
-    margin-bottom: 16px;
-    padding-left: 20px;
+    margin-bottom: 22px;
+    padding-left: 6px;
+    padding-bottom: 14px;
   }
 
   .form .wrap-btn {
     width: 100%;
-    margin-bottom: 74px;
-  }
-
-  .form .custom-select,
-  .form .link-presentation {
-    width: 48%;
-    border: none;
-    padding-right: 10px;
-    padding-left: 46px;
-  }
-
-  .form .link-presentation:before,
-  .form .custom-select:before {
-    width: 34px;
-    height: 37px;
-    left: 0;
   }
 
   .contact-side-form {
@@ -2372,18 +2467,44 @@ body.modal-open {
   }
 
   .section-contacts .section__slogan {
-    font-size: 17px;
-    margin-bottom: 50px;
-    padding-left: 25px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 80px;
   }
 
   .section-contacts .bold {
-    font-size: 45px;
-    margin-bottom: 11px;
+    font-size: 50px;
+    margin-bottom: 18px;
+  }
+
+  .section-contacts .address {
+    font-size: 17px;
   }
 
   .section-contacts .address .link-phone {
-    font-size: 40px;
+    font-size: 37px;
+  }
+
+  .section-contacts .address__item:nth-child(1),
+  .section-contacts .address__item:nth-child(3) {
+    margin-bottom: 17px;
+  }
+
+  .section-contacts .link-presentation,
+  .section-contacts .dropdown {
+    display: none;
+  }
+
+  .section-contacts .field-box {
+    margin-bottom: 38px;
+  }
+
+  .section-contacts .form__footer {
+    padding: 0;
+  }
+
+  .section-contacts .form__footer .wrap-btn {
+    text-align: center;
   }
 
   .container {
@@ -2506,7 +2627,12 @@ body.modal-open {
   .contact-btn {
     width: 57px;
     height: 57px;
-    right: 20px;
+    right: 12px;
+  }
+
+  .contact-btn .wrap-img-written {
+    -webkit-background-size: 18px;
+    background-size: 18px;
   }
 
   .section-partners {
@@ -2543,41 +2669,6 @@ body.modal-open {
     margin-left: 28px;
   }
 
-  .section-contacts .section__slogan {
-    padding: 0 20px;
-  }
-
-  .section-contacts .bold {
-    font-size: 39px;
-  }
-
-  .section-contacts .address {
-    font-size: 17px;
-  }
-
-  .section-contacts .address .link-phone {
-    font-size: 37px;
-  }
-
-  .section-contacts .form__footer {
-    padding-left: 0;
-  }
-
-  .section-contacts .wrap-btn {
-    text-align: center;
-    margin-bottom: 66px;
-  }
-
-  .section-contacts .address {
-    padding-top: 0;
-    margin: 0 5px;
-  }
-
-  .section-contacts .link-presentation,
-  .section-contacts .custom-select {
-    display: none;
-  }
-
   .container {
     max-width: 100%;
     padding: 0 12px;
@@ -2590,11 +2681,14 @@ body.modal-open {
   .footer .social-bar {
     margin-bottom: 26px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 18px;
   }
 
   .footer .social__link {
     margin: 0;
+    width: 23px;
+    height: 23px;
   }
 
   .page-projects .section-gallery .card-gallery {

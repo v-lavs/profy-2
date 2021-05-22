@@ -145,7 +145,11 @@ body {
   @include respond-to($xs) {
     width: 57px;
     height: 57px;
-    right: 20px;
+    right: 12px;
+    .wrap-img-written{
+      -webkit-background-size: 18px;
+      background-size: 18px;
+    }
   }
 }
 

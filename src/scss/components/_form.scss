@@ -29,73 +29,96 @@
   }
 
   .field-box {
-    max-width: 354px;
-    width: 25%;
+    max-width: 320px;
+    padding-left: 36px;
+    width: 45%;
   }
 
   &__footer {
     display: flex;
     width: 55%;
-    justify-content: space-between;
+
+    .wrap-btn {
+      flex-grow: 1;
+    }
 
   }
 
-  @include respond-to($xl) {
+  @include respond-to($xxl) {
     .field-box {
-      width: 32%;
+      width: 35%;
+    }
+    .textarea,
+    .form__footer {
+      width: 65%;
+    }
+    .dropdown {
+      margin-left: 50px;
+    }
+  }
+  @include respond-to($xl) {
+    .textarea {
+      margin-bottom: 40px;
+    }
+    .form__footer {
+      justify-content: space-between;
+
+      .wrap-btn {
+        flex-grow: 0;
+      }
+
+      .dropdown {
+        margin: 0;
+      }
+    }
+  }
+  @include respond-to($lg) {
+    .field-box {
+      padding-left: 0;
+      width: 100%;
+      margin-bottom: 60px;
     }
   }
   @include respond-to($sm) {
-    font-size: 16px;
-    .form__footer{
+    font-size: 17px;
+    .form__footer {
       flex-wrap: wrap;
       padding-left: 28px;
       padding-top: 30px;
     }
-    .textarea{
+    .textarea {
       max-height: 54px;
-      margin-bottom: 16px;
-      padding-left: 20px;
+      margin-bottom: 22px;
+      padding-left: 6px;
       font-size: 16px;
     }
-    .input{
-      margin-bottom: 16px;
-      padding-left: 20px;
+    .input {
+      margin-bottom: 22px;
+      padding-left: 6px;
+      padding-bottom: 14px;
     }
-    .wrap-btn{
+    .wrap-btn {
       width: 100%;
-      margin-bottom: 74px;
-    }
-    .custom-select,
-    .link-presentation{
-      width: 48%;
-      border: none;
-      padding-right: 10px;
-      padding-left: 46px;
-    }
-    .link-presentation:before,
-    .custom-select:before{
-      width: 34px;
-      height: 37px;
-      left: 0;
     }
   }
 }
 
+.brief,
 .link-presentation {
   position: relative;
   font-size: 15px;
   font-weight: 600;
   color: $dark;
   display: block;
-  padding: 10px 18px 13px 63px;
+  padding: 9px 18px 12px 38px;
   border: 1px solid #000000;
   text-align: center;
   min-width: 175px;
+  transition: .35s;
+
   &:before {
     position: absolute;
     content: '';
-    background-image: url(../assets/img/svg/up-pdf.svg);
     width: 19px;
     height: 20px;
     background-repeat: no-repeat;
@@ -105,4 +128,73 @@
     bottom: 50%;
     transform: translateY(50%);
   }
+
+  &:hover,
+  &:focus {
+    background-color: $dark;
+    color: $white;
+  }
+
+  &:hover:before,
+  &:focus:before {
+    filter: invert(1);
+  }
+
+  @include respond-to($md) {
+    padding-top: 8px;
+    padding-bottom: 10px;
+  }
 }
+
+.brief:before {
+  background-image: url(../assets/img/svg/upload.svg);
+}
+
+.link-presentation:before {
+  background-image: url(../assets/img/svg/up-pdf.svg);
+}
+
+.dropdown {
+  position: relative;
+  margin-left: 68px;
+
+  &:hover,
+  &:focus {
+    .dropdown__content {
+      max-height: 350px;
+      opacity: 1;
+    }
+  }
+
+  &__content {
+    cursor: pointer;
+    border: 1px solid #000000;
+    color: $dark;
+    position: absolute;
+    background-color: $white;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    font-size: 15px;
+    -webkit-transition: max-height .75s;
+    transition: max-height .75s;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  &__link {
+    padding: 10px 10px 13px;
+    text-align: center;
+    transition: .35s;
+    display: block;
+
+    &:hover, &:focus {
+      background-color: $dark;
+      color: $white;
+    }
+  }
+}
+
+
