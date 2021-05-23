@@ -1,6 +1,5 @@
 .fade-in{
   opacity: 0;
-
   $animation-speed: .4s;
   &.active {
     animation: fadeIn ease-in $animation-speed forwards;
@@ -8,11 +7,11 @@
     -moz-animation: fadeIn ease-in $animation-speed forwards;
     -ms-animation: fadeIn ease-in $animation-speed forwards;
 
-    //@for $i from 1 through 4 {
-    //  &:nth-child(#{$i}) {
-    //    animation-delay: #{$i * .15}s;
-    //  }
-    //}
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i * .15}s;
+      }
+    }
   }
 }
 
