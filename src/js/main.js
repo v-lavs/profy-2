@@ -18,15 +18,11 @@ $(document).ready(function () {
 
     const nav = $('.header__nav');
 
-    $('.btn-burger').on('click', function (e) {
+    $('.btn-burger ').on('click', function (e) {
         e.preventDefault();
-        nav.addClass('open');
-        $('body').addClass('modal-open')
-    });
-
-    $('.btn-close, .backdrop, .menu__link').click(function (e) {
-        nav.removeClass('open');
-        $('body').removeClass('modal-open')
+        nav.toggleClass('open');
+        $(this).toggleClass('open');
+        $('body').toggleClass('modal-open');
     });
 
 
@@ -48,7 +44,7 @@ $(document).ready(function () {
         $('body').removeClass('modal-open')
     });
 
-        //SMOOTH SCROLL TO ANGKOR
+    //SMOOTH SCROLL TO ANGKOR
 
     function smoothScrollToAnchor(selector) {
         $(selector).on('click', function (event) {
@@ -246,9 +242,6 @@ $(document).ready(function () {
         },
     });
 
-    setTimeout(function () {
-        $('.section-team').addClass('active');
-    }, 300);
 
     //HIDE TEXT
     $('.text-hide .open-up').on('click', function (e) {
@@ -257,9 +250,16 @@ $(document).ready(function () {
         $(this).hide();
     });
 
-    var fadeInBlocks = $('.fade-in').waypoint(function (direction) {
-        $(this.element).addClass('active')
-    }, {
-        offset: '80%'
-    });
+//ANIMATIOON
+    setTimeout(function () {
+        $('.section-team').addClass('active');
+    }, 300);
+
+    setTimeout(function () {
+        var waypoints = $('.section_anim').waypoint(function (direction) {
+            $(this.element).addClass('section_in-view')
+        }, {
+            offset: '75%'
+        });
+    }, 300);
 });

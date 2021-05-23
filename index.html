@@ -23,9 +23,9 @@
     <header class="header">
         <div class="container">
 
-            <a href="/" class="header__logo ui ">
+            <a href="/" class="header__logo ui">
                 <picture>
-                    <source srcset="assets/img/svg/big-logo.svg" media="(max-width: 960px)">
+                    <source srcset="assets/img/svg/big-logo.svg" media="(max-width: 768px)">
                     <img src="assets/img/svg/logo-site.svg" alt="Space Cleaning" class="img img-logo">
                 </picture>
             </a>
@@ -37,7 +37,6 @@
                 <a href="/" class="header__logo_mob">
                     <img src="assets/img/svg/big-logo-white.svg" alt="Space Cleaning" class="img img-logo">
                 </a>
-                <button class="btn-close" aria-label="Закрити"></button>
                 <ul class="menu">
                     <li class="menu__item">
                         <a href="page-projects.html" class="menu__link">Проекти</a>
@@ -53,16 +52,21 @@
                     <a href="#" class="lang-switch__link lang-switch__link_active">UA</a>
                     <a href="#" class="lang-switch__link">EN</a>
                 </div>
-                <div class="wrap-link">
-                    <a href="#" class="link-presentation"><span class="mob-hide">Download</span> presentation</a>
-                    <select name="link-brief" class="custom-select form-control">
-                        <option data-display="Download brief" value="none" hidden="">Download brief</option>
-                        <option value="1">brief 1</option>
-                        <option value="2">brief 2</option>
-                        <option value="3">brief 3</option>
-                        <option value="4">brief 4</option>
-                    </select>
+                <div class="link-bar-mob">
+                    <a href="#" class="link-bar-mob__item"><img src="assets/img/svg/upload.svg" alt="">presentation</a>
+                    <a href="#" id="openListBrief" class="link-bar-mob__item"><img src="assets/img/svg/up-pdf.svg" alt=""> brif</a>
                 </div>
+                <ul class="list list-brief">
+                    <li class="list__item">
+                        <a href="#" class="list__link">Веб сайт</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#" class="listlist__link">Упаковка</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#" class="list__link">Логотип</a>
+                    </li>
+                </ul>
             </nav>
 
 
@@ -93,7 +97,7 @@
             </a>
         </section>
 
-        <section class="section-gallery fade-in"  id="section-gallery">
+        <section class="section-gallery section_anim" id="section-gallery">
             <button class="contact-btn">
                 <span class="wrap-img-written">
                     <img src="assets/img/svg/btn-written.svg" alt="" class="img_written">
@@ -127,7 +131,7 @@
                             <div class="card-gallery__text">упаковка, брендинг</div>
                         </div>
                     </a>
-                    <a href="#" class="card-gallery card-gallery_big">
+                    <a href="#" class="card-gallery card-gallery_big  section_anim">
                         <div class="card-gallery__wrap-thumb card-gallery__wrap-thumb_big">
                             <img src="assets/img/meteorit.jpg" alt="Туррон Метеорит" class="card-gallery__thumb">
                         </div>
@@ -140,7 +144,7 @@
 
             </div>
         </section>
-        <section class="section-partners fade-in">
+        <section class="section-partners section_anim">
             <div class="marquee">
                 <div class="marquee-line _marquee" data-direction="left">
                     <div class="marquee-body">
@@ -182,7 +186,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-develop fade-in" >
+        <section class="section-develop section_anim">
             <div class="container">
                 <div class="section__header">
                     <h2 class="section__title">Ми розробляємо:</h2>
@@ -251,7 +255,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-contacts fade-in" id="contacts" >
+        <section class="section-contacts section_anim" id="contacts">
             <div class="container">
 
                 <div class="section__slogan">
@@ -371,7 +375,7 @@
             <a href="tel:+38 073 221 05 86" class="phone-link">+38 073 221 05 86</a>
         </div>
     </div>
-    <footer  class="footer">
+    <footer class="footer">
         <div class="footer_top">
             <div class="social-bar">
                 <a href="#" class="social__link"><span class="hide">Instagram</span>

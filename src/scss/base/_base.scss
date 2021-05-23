@@ -152,4 +152,11 @@ body {
     }
   }
 }
+.section_anim {
+      opacity: 0;
+    -webkit-transition: opacity ease-in .5s;
+}
 
+.section_in-view {
+    opacity: 1;
+}

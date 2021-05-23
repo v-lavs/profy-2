@@ -2,30 +2,39 @@
   padding-top: 47px;
   padding-bottom: 8%;
   position: relative;
+
+
   .block-logo {
     margin-bottom: 42px;
+    display: flex;
+    align-items: center;
   }
 
   .logo-link {
     display: inline-block;
-    margin-right: 92px;
     vertical-align: middle;
+    width: 50%;
+    &:nth-child(1) {
+      text-align: right;
+      padding-right: 105px;
+    }
 
-    &:last-child {
-      margin-right: 0;
+    &:nth-child(2) {
+      padding-left: 105px;
     }
   }
 
   .card-gallery__list {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -54px;
+    margin: 0 -34px;
   }
 
   .card-gallery {
-    padding: 0 54px;
+    padding: 0 34px;
     width: 50%;
     margin-bottom: 130px;
+
     &:last-of-type {
       margin-bottom: 0;
     }
@@ -56,30 +65,33 @@
     }
   }
 
-  @include respond-to($lg){
-    .card-gallery{
+  @include respond-to($lg) {
+    .card-gallery {
       padding-left: 10px;
       padding-right: 10px;
     }
-  }
-  @include respond-to($sm){
-    padding-top: 26px;
-    background-color: $white;
-    .block-logo{
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 27px;
-    }
-    .logo-link{
-      max-width: 140px;
-      margin-right: 37px;
-      &:last-child{
-        margin-right: 0;
-        max-width: 47px;
+    .logo-link {
+      &:nth-child(1) {
+        padding-right: 55px;
+      }
+
+      &:nth-child(2) {
+        padding-left: 55px;
       }
     }
-    .card-gallery__list{
+  }
+  @include respond-to($sm) {
+    padding-top: 26px;
+    background-color: $white;
+    .block-logo {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 27px;
+    }
+    .logo-link {
+      width: auto;
+    }
+    .card-gallery__list {
       margin: 0;
     }
     .card-gallery {
@@ -87,25 +99,48 @@
       padding-left: 0;
       padding-right: 0;
       margin-bottom: 70px;
-      &:last-of-type{
+
+      &:last-of-type {
         margin-bottom: 25px;
       }
-      &__wrap-thumb{
+
+      &__wrap-thumb {
         margin-bottom: 16px;
       }
-      &__title{
+
+      &__title {
         margin-bottom: 0;
         font-size: 20px;
       }
-      &__text{
+
+      &__text {
         font-size: 12px;
       }
+
       &__wrap-thumb,
-      &__wrap-thumb_big{
+      &__wrap-thumb_big {
         padding-top: 80%;
       }
-      &__body{
+
+      &__body {
         padding-left: 0;
+      }
+    }
+  }
+  @include respond-to($xs) {
+    padding-top: 33px;
+    .block-logo{
+      margin-bottom: 50px;
+    }
+    .logo-link {
+      &:nth-child(1) {
+        width: 144px;
+        padding-right: 25px;
+      }
+
+      &:nth-child(2) {
+        padding-left: 25px;
+        width: 69px;
       }
     }
   }
