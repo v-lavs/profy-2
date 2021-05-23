@@ -112,16 +112,16 @@
     display: none;
   }
 
-  &_white {
+  //&_white {
     .background--dark{
       filter: invert(1);
     }
-    .btn-burger{
-      .line {
-        background-color: #000000;
-      }
-    }
-  }
+    //.btn-burger{
+    //  .line {
+    //    background-color: #000000;
+    //  }
+    //}
+  //}
 
   @include respond-to($xl) {
     padding: 30px 0;
