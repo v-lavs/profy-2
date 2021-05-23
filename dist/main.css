@@ -510,11 +510,14 @@ body.modal-open {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  transform-origin: 50% 50%;
-  transform: translateY(-50%);
+  bottom: 35px;
+  width: 33px;
+  height: 18px;
+  left: 0;
   transition: transform .5s;
   z-index: 11;
   cursor: pointer;
+  display: none;
 }
 
 .accordion .panel {
@@ -604,10 +607,6 @@ body.modal-open {
 .accordion .panel-collapse__body {
   background-color: #f2f6f6;
   padding: 15px 0;
-}
-
-.accordion .accordion__arrow {
-  display: none;
 }
 
 .swiper-button-next,
@@ -2026,20 +2025,12 @@ body.modal-open {
     padding: 0;
   }
 
-  .accordion .accordion__arrow {
-    display: block;
-    bottom: 35px;
-    width: 33px;
-    height: 18px;
-    left: 0;
-  }
-
-  .accordion .open {
+  .accordion .panel .accordion__arrow {
     display: block;
   }
 
-  .accordion .open .accordion__arrow {
-    transform: rotate(-180deg) translateY(50%);
+  .accordion .panel .accordion__arrow.open {
+    transform: rotate(-180deg);
   }
 
   .section-banner .scroll-down {

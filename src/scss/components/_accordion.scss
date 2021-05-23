@@ -7,11 +7,15 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    transform-origin: 50% 50%;
-    transform: translateY(-50%);
+    bottom: 35px;
+    width: 33px;
+    height: 18px;
+    left: 0;
     transition: transform .5s;
     z-index: 11;
     cursor: pointer;
+
+    display: none;
   }
 
   .panel {
@@ -104,9 +108,6 @@
     }
   }
 
-  .accordion__arrow {
-    display: none;
-  }
 
   @include respond-to($lg) {
     .panel__text {
@@ -147,6 +148,7 @@
         width: 100%;
         font-size: 25px;
         padding-left: 52px;
+
         .icon {
           left: 0;
           top: 4px;
@@ -162,20 +164,13 @@
         width: 100%;
         padding: 0;
       }
-    }
-
-    .accordion__arrow {
-      display: block;
-      bottom: 35px;
-      width: 33px;
-      height: 18px;
-      left: 0;
-    }
-    .open {
-      display: block;
 
       .accordion__arrow {
-        transform: rotate(-180deg) translateY(50%);
+        display: block;
+
+        &.open {
+            transform: rotate(-180deg);
+        }
       }
     }
   }
