@@ -4,11 +4,15 @@
 
 //= include ../../node_modules/jquery/dist/jquery.js ;
 //= include ../lib/waypoints/index.js
+//= include ../lib/bg-check.js
 
 
 // CUSTOM SCRIPTS
 
 $(document).ready(function () {
+    BackgroundCheck.init({
+        targets: '.ui',
+    });
 
     // MOBILE MENU
 
@@ -242,10 +246,16 @@ $(document).ready(function () {
         },
     });
 
+    setTimeout(function () {
+        $('.section-team').addClass('active');
+    }, 300);
+
     //HIDE TEXT
     $('.text-hide .open-up').on('click', function (e) {
         e.preventDefault();
         $('.text-hide .mob-hide').removeClass('mob-hide');
         $(this).hide();
     });
+
+
 });

@@ -35,8 +35,22 @@
   }
 
   .section-team {
-
     padding-bottom: 116px;
+    overflow: hidden;
+    &.active {
+      .section__heading {
+        width: 100%;
+      }
+      .wrap-thumb {
+        opacity: 1;
+        transition: 550ms opacity 350ms linear;
+      }
+      .part_right {
+        opacity: 1;
+        transform: translateX(0);
+        transition: 550ms all 550ms linear;
+      }
+    }
 
     .container {
       display: flex;
@@ -52,6 +66,8 @@
         justify-content: space-between;
         padding-bottom: 40px;
         padding-top: 26px;
+        transform: translateX(100%);
+        opacity: 0;
       }
 
       &_left {
@@ -59,7 +75,6 @@
         padding-right: 17px;
       }
     }
-
 
     .section__slogan {
       font-size: 60px;
@@ -79,6 +94,9 @@
 
     .section__heading {
       padding-top: 26px;
+      overflow: hidden;
+      width: 0;
+      transition: .5s;
 
       .section__title {
         font-size: 130px;
@@ -111,6 +129,7 @@
       right: 26px;
       top: 0;
       width: 53.8%;
+      opacity: 0;
       z-index: -1;
     }
 

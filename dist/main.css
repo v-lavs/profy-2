@@ -1,5 +1,7 @@
 @import url(../lib/effect-js/effect-js.min.css);
 
+@import url(base/animation.css);
+
 html,
 body {
   width: 100%;
@@ -1244,7 +1246,7 @@ body.modal-open {
   display: none;
 }
 
-.header_white .header__logo {
+.header_white .background--dark {
   filter: invert(1);
 }
 
@@ -1407,6 +1409,22 @@ body.modal-open {
 
 .page-services .section-team {
   padding-bottom: 116px;
+  overflow: hidden;
+}
+
+.page-services .section-team.active .section__heading {
+  width: 100%;
+}
+
+.page-services .section-team.active .wrap-thumb {
+  opacity: 1;
+  transition: 550ms opacity 350ms linear;
+}
+
+.page-services .section-team.active .part_right {
+  opacity: 1;
+  transform: translateX(0);
+  transition: 550ms all 550ms linear;
 }
 
 .page-services .section-team .container {
@@ -1424,6 +1442,8 @@ body.modal-open {
   justify-content: space-between;
   padding-bottom: 40px;
   padding-top: 26px;
+  transform: translateX(100%);
+  opacity: 0;
 }
 
 .page-services .section-team .part_left {
@@ -1449,6 +1469,9 @@ body.modal-open {
 
 .page-services .section-team .section__heading {
   padding-top: 26px;
+  overflow: hidden;
+  width: 0;
+  transition: .5s;
 }
 
 .page-services .section-team .section__heading .section__title {
@@ -1481,6 +1504,7 @@ body.modal-open {
   right: 26px;
   top: 0;
   width: 53.8%;
+  opacity: 0;
   z-index: -1;
 }
 
