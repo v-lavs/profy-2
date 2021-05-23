@@ -1242,8 +1242,12 @@ body.modal-open {
   display: none;
 }
 
-.header .background--dark {
+.header_white .background--dark {
   filter: invert(1);
+}
+
+.header_white .btn-burger .line {
+  background-color: #000000;
 }
 
 .footer {
