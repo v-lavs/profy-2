@@ -2,11 +2,11 @@
   font-weight: 500;
   font-size: 50px;
   text-align: center;
-
+  opacity: 0;
+  transform: translateX(-100%);
   &__item {
     position: relative;
     transition: .35s;
-    text-transform: uppercase;
     color: $white;
     line-height: 1.2;
     margin-bottom: 1.75em;
@@ -17,7 +17,7 @@
 
     &:hover,
     &:focus {
-      -webkit-text-stroke: .5px #ffffff;
+      -webkit-text-stroke: 1px #ffffff;
     }
 
     &:first-child {

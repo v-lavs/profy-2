@@ -32,7 +32,7 @@
     text-transform: uppercase;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(100%);
     bottom: 65px;
     color: $white;
 
@@ -139,14 +139,66 @@
       opacity: .9;
       visibility: visible;
       transition: .8s;
+      .menu{
+        opacity: 1;
+        transform: translateX(0);
+        transition: 550ms all 550ms linear;
+      }
+      .lang-switch{
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+        transition: 550ms all 550ms linear;
+      }
     }
 
-    .list-brief {
+    .list {
       position: fixed;
       display: flex;
       bottom: 0;
       left: 0;
       right: 0;
+      z-index: 1;
+      height: 0;
+      overflow: hidden;
+      transition: .5s;
+
+      &__item{
+        width: 33.33%;
+        position: relative;
+        font-size: 15px;
+        font-weight: 700;
+        color: $white;
+        background-color: rgba(255, 255, 255, 0.5);
+        text-align: center;
+        &:before{
+          position: absolute;
+          content: '';
+          display: block;
+          width: .5px;
+          background-color: $dark;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          z-index: 1;
+        }
+        &:last-child:before{
+          display: none;
+        }
+      }
+      &__link{
+        display: inline-block;
+        opacity: 0;
+        padding: 22px 33px 38px;
+
+      }
+      &.open-list{
+        height: 80px;
+
+        .list__link{
+          opacity: 1;
+          transition: 550ms opacity 350ms linear;
+        }
+      }
     }
 
     .wrap-link {
@@ -188,11 +240,11 @@
       img {
         position: absolute;
         filter: invert(1);
-        width: 50px;
-        height: 50px;
-        top: -20px;
+        width: 34px;
+        height: 34px;
+        top: 3px;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-150%, 150%);
       }
     }
 
@@ -239,12 +291,37 @@
   }
 
   @include respond-to($sm) {
+    &:not(.header_home){
+      background-color: $white;
+    }
     padding: 20px 0;
     .header__nav {
       flex-direction: column;
 
       .link-bar-mob {
         display: flex;
+      }
+      .menu{
+        transform: translateX(0);
+        opacity: 1;
+        &__item:nth-child(2) {
+          transform: translate(-150%, 150%);
+          opacity: 0;
+        }
+      }
+      &.open{
+        .menu{
+          &__item:nth-child(2) {
+            opacity: 1;
+            transform: translate(0, 0);
+          }
+        }
+
+        .link-bar-mob img{
+          transform: translate(-50%, 0);
+          opacity: 1;
+          transition: 550ms all 550ms linear;
+        }
       }
     }
     .container {
@@ -294,9 +371,7 @@
   @include respond-to($xs) {
     .link-bar-mob{
       &__item img{
-        width: 34px;
-        height: 34px;
-        top: 3px;
+
       }
     }
     .lang-switch {

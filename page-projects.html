@@ -23,7 +23,7 @@
     <header class="header header_white">
         <div class="container">
 
-            <a href="index.html" class="header__logo ui">
+            <a href="/" class="header__logo ui">
                 <picture>
                     <source srcset="assets/img/svg/big-logo.svg" media="(max-width: 640px)">
                     <img src="assets/img/svg/logo-site.svg" alt="Space Cleaning" class="img img-logo">
@@ -34,10 +34,9 @@
                 <a href="#" class="lang-switch__link">EN</a>
             </div>
             <nav class="header__nav">
-                <a href="/" class="header__logo_mob">
+                <a href="index.html" class="header__logo_mob">
                     <img src="assets/img/svg/big-logo-white.svg" alt="Space Cleaning" class="img img-logo">
                 </a>
-                <button class="btn-close" aria-label="Закрити"></button>
                 <ul class="menu">
                     <li class="menu__item">
                         <a href="page-projects.html" class="menu__link">Проекти</a>
@@ -53,16 +52,21 @@
                     <a href="#" class="lang-switch__link lang-switch__link_active">UA</a>
                     <a href="#" class="lang-switch__link">EN</a>
                 </div>
-                <div class="wrap-link">
-                    <a href="#" class="link-presentation"><span class="mob-hide">Download</span> presentation</a>
-                    <select name="link-brief" class="custom-select form-control">
-                        <option data-display="Download brief" value="none" hidden="">Download brief</option>
-                        <option value="1">brief 1</option>
-                        <option value="2">brief 2</option>
-                        <option value="3">brief 3</option>
-                        <option value="4">brief 4</option>
-                    </select>
+                <div class="link-bar-mob">
+                    <a href="#" class="link-bar-mob__item"><img src="assets/img/svg/upload.svg" alt="">presentation</a>
+                    <a href="#" id="openListBrief" class="link-bar-mob__item"><img src="assets/img/svg/up-pdf.svg" alt=""> brif</a>
                 </div>
+                <ul class="list list-brief">
+                    <li class="list__item">
+                        <a href="#" class="list__link">Веб сайт</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#" class="list__link">Упаковка</a>
+                    </li>
+                    <li class="list__item">
+                        <a href="#" class="list__link">Логотип</a>
+                    </li>
+                </ul>
             </nav>
 
 
@@ -72,7 +76,6 @@
                 <span class="line"></span>
             </button>
         </div>
-
     </header>
 
     <main class="main page page-projects">

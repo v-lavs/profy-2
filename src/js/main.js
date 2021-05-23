@@ -18,13 +18,25 @@ $(document).ready(function () {
 
     const nav = $('.header__nav');
 
-    $('.btn-burger ').on('click', function (e) {
-        e.preventDefault();
+    $('.btn-burger').on('click', function (e) {
+        // e.preventDefault();
+        e.stopPropagation();
         nav.toggleClass('open');
         $(this).toggleClass('open');
         $('body').toggleClass('modal-open');
     });
 
+
+    //OPEN LIST BRIFS
+    $('#openListBrief').on('click', function (e) {
+        e.preventDefault();
+        $('.header__nav .list').addClass('open-list');
+
+    });
+    $('.btn-burger, .list__link, .menu__link').click(function (e) {
+        e.preventDefault();
+        $('.header__nav .list').removeClass('open-list');
+    });
 
     // CONTACT-SIDE-FORM
 
