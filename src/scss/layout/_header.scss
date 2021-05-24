@@ -137,6 +137,7 @@
 
     .header {
       background-color: transparent;
+      z-index: 1;
     }
 
     &.open {
@@ -305,6 +306,7 @@
   @include respond-to($sm) {
     &:not(.header_home) {
       background-color: $white;
+
       .ui.background--dark,
       .ui.background--white {
         -webkit-filter: none;
@@ -338,6 +340,12 @@
       }
 
       &.open {
+        .btn-burger {
+          .line {
+            background-color: $white;
+          }
+        }
+
         .menu {
           &__item:nth-child(2) {
             opacity: 1;

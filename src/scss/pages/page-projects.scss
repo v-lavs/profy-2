@@ -14,7 +14,13 @@
 
       &__wrap-thumb {
         padding-top: 73.5%;
-        margin-bottom: 18px;
+      }
+
+      &__thumb {
+        &:hover,
+        &:focus {
+          transform: translate(-50%, -50%) scale(1);
+        }
       }
     }
 
@@ -76,7 +82,7 @@
         width: 100%;
         margin-bottom: 28px;
 
-        &__wrap-thumb {
+        .inner {
           margin-bottom: 8px;
         }
       }
@@ -88,6 +94,7 @@
 
   overflow: hidden;
 }
+
 .mouse-parallax-bg {
   width: 110%;
   height: 110%;

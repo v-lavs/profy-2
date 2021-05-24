@@ -44,9 +44,7 @@
     }
 
     &__wrap-thumb {
-      padding-top: 70%;
-      margin-bottom: 26px;
-
+      padding-top: 80%;
       &_big {
         padding-top: 57%;
       }
@@ -62,6 +60,10 @@
 
     &__title {
       margin-bottom: 0;
+    }
+    .inner{
+      overflow: hidden;
+      margin-bottom: 26px;
     }
   }
 
@@ -104,7 +106,7 @@
         margin-bottom: 25px;
       }
 
-      &__wrap-thumb {
+      .inner {
         margin-bottom: 16px;
       }
 
