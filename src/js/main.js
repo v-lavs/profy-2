@@ -286,4 +286,9 @@ $(document).ready(function () {
         });
     }, 300);
 
+
+    if ($(window).width() < 768) {
+        const tilt = $('.js-tilt').tilt()
+        tilt.methods.destroy.call(tilt);
+    }
 });
