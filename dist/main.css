@@ -1336,7 +1336,7 @@ body.modal-open {
 }
 
 .header .header__nav .list__link {
-  display: inline-block;
+  display: block;
   opacity: 0;
   padding: 22px 33px 38px;
 }
