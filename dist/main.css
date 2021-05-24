@@ -1178,7 +1178,6 @@ body.modal-open {
   width: 163px;
   height: auto;
   display: block;
-  z-index: 999;
 }
 
 .header .header__logo_mob {
@@ -1222,7 +1221,7 @@ body.modal-open {
   position: absolute;
   height: 3px;
   width: 100%;
-  background-color: #ffffff;
+  background-color: #000000;
   opacity: 1;
   left: 0;
   transform: rotate(0deg);
@@ -1242,6 +1241,10 @@ body.modal-open {
 .header .btn-burger .line:nth-child(3) {
   top: 18px;
   transform-origin: left center;
+}
+
+.header .btn-burger.open .line {
+  background-color: #fff;
 }
 
 .header .btn-burger.open .line:nth-child(1) {
@@ -1289,6 +1292,10 @@ body.modal-open {
   height: 100vh;
   overflow-y: auto;
   max-height: 100%;
+}
+
+.header .header__nav .header {
+  background-color: transparent;
 }
 
 .header .header__nav.open {
@@ -1370,12 +1377,13 @@ body.modal-open {
   display: none;
 }
 
-.header .background--dark {
+.header .ui.background--dark {
   filter: invert(1);
 }
 
-.header .background--white {
-  filter: invert(1);
+.header .ui.background--white {
+  -webkit-filter: invert(0);
+  filter: invert(0);
 }
 
 .header .link-bar-mob {
@@ -2067,13 +2075,11 @@ body.modal-open {
   }
 
   .page-projects .section-gallery .logo-link {
-    max-width: 140px;
-    margin-right: 37px;
+    max-width: 200px;
   }
 
   .page-projects .section-gallery .logo-link:last-child {
-    margin-right: 0;
-    max-width: 47px;
+    padding-left: 35px;
   }
 
   .page-projects .section-gallery .card-gallery__list {
@@ -2498,6 +2504,15 @@ body.modal-open {
     flex-direction: column;
   }
 
+  .header .header__nav .header__logo {
+    display: block;
+    position: absolute;
+    max-width: 44px;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
   .header .header__nav .link-bar-mob {
     display: flex;
   }
@@ -2551,17 +2566,10 @@ body.modal-open {
     z-index: 1;
   }
 
-  .header .header__logo_mob {
-    display: block;
-    position: absolute;
-    max-width: 44px;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
   .header .btn-burger {
     order: -1;
+    height: 22px;
+    overflow: hidden;
   }
 
   .header .menu {
@@ -2586,6 +2594,14 @@ body.modal-open {
 
   .page-projects .card-gallery {
     padding: 0 15px;
+  }
+
+  .page-projects .logo-link:first-child img {
+    width: 110px;
+  }
+
+  .page-projects .logo-link:last-child img {
+    width: 44px;
   }
 
   .page-services .section-team {

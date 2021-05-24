@@ -25,7 +25,7 @@
 
             <a href="/" class="header__logo ui">
                 <picture>
-                    <source srcset="assets/img/svg/big-logo-white.svg" media="(max-width: 640px)">
+                    <source srcset="assets/img/svg/big-logo.svg" media="(max-width: 640px)">
                     <img src="assets/img/svg/logo-site.svg" alt="Space Cleaning" class="img img-logo">
                 </picture>
             </a>
@@ -33,10 +33,18 @@
                 <a href="#" class="lang-switch__link lang-switch__link_active">UA</a>
                 <a href="#" class="lang-switch__link">EN</a>
             </div>
+
             <nav class="header__nav">
-                <a href="/" class="header__logo_mob">
-                    <img src="assets/img/svg/big-logo-white.svg" alt="Space Cleaning" class="img img-logo">
-                </a>
+                <div class="header">
+                    <div class="container">
+                        <a href="/" class="header__logo">
+                            <picture>
+                                <source srcset="assets/img/svg/big-logo-white.svg" media="(max-width: 640px)">
+                                <img src="assets/img/svg/logo-site-white.svg" alt="Space Cleaning" class="img img-logo">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
                 <ul class="menu">
                     <li class="menu__item">
                         <a href="page-projects.html" class="menu__link">Проекти</a>
@@ -54,7 +62,8 @@
                 </div>
                 <div class="link-bar-mob">
                     <a href="#" class="link-bar-mob__item"><img src="assets/img/svg/upload.svg" alt="">presentation</a>
-                    <a href="#" id="openListBrief" class="link-bar-mob__item"><img src="assets/img/svg/up-pdf.svg" alt=""> brif</a>
+                    <a href="#" id="openListBrief" class="link-bar-mob__item"><img src="assets/img/svg/up-pdf.svg"
+                                                                                   alt=""> brif</a>
                 </div>
                 <ul class="list list-brief">
                     <li class="list__item">
@@ -68,7 +77,6 @@
                     </li>
                 </ul>
             </nav>
-
 
             <button type="button" class="btn-burger ui" aria-label="бургер-меню">
                 <span class="line"></span>
@@ -87,6 +95,9 @@
                     </div>
                     <div class="swiper-slide banner__slide"
                          style="background-image: url(assets/img/img-project4.jpg);">
+                    </div>
+                    <div class="swiper-slide banner__slide"
+                         style="background-image: url(assets/img/glicesed.jpg);">
                     </div>
                 </div>
             </div>
@@ -401,14 +412,7 @@
             © PROFI Creative Group, 2021.
         </div>
     </footer>
-    <div class="popup-wrapper" id="video-popup-wrapper">
-        <button id="close-video-popup" class="close-popup  btn-close"></button>
-        <div class="popup">
-            <video class="video" controls src="assets/video/burgers.mp4" width="900" height="530" id="video">
-                Тег video не підтримується вашим браузером.
-            </video>
-        </div>
-    </div>
+
 </div>
 
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

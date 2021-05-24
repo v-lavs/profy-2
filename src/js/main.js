@@ -12,6 +12,7 @@
 $(document).ready(function () {
     BackgroundCheck.init({
         targets: '.ui',
+        windowEvents:true,
     });
 
     // MOBILE MENU
