@@ -19,21 +19,25 @@ $(document).ready(function () {
     const nav = $('.header__nav');
 
     $('.btn-burger').on('click', function (e) {
-        // e.preventDefault();
-        e.stopPropagation();
+        e.preventDefault();
         nav.toggleClass('open');
         $(this).toggleClass('open');
         $('body').toggleClass('modal-open');
     });
-
+    // $('.menu__link').on('click', function (e) {
+    //     nav.removeClass('open');
+    //     $('.btn-burger').toggleClass('open');
+    //     $('body').toggleClass('modal-open');
+    // });
 
     //OPEN LIST BRIFS
+
     $('#openListBrief').on('click', function (e) {
-        e.preventDefault();
+        // e.preventDefault();
         $('.header__nav .list').addClass('open-list');
 
     });
-    $('.btn-burger, .list__link, .menu__link').click(function (e) {
+    $('.btn-burger, .list__link').click(function (e) {
         e.preventDefault();
         $('.header__nav .list').removeClass('open-list');
     });
@@ -48,7 +52,6 @@ $(document).ready(function () {
         $('.backdrop').fadeIn();
         $('body').addClass('modal-open')
     });
-
     $('.btn-close, .backdrop').click(function (e) {
         e.preventDefault();
         blockWritten.removeClass('open');
@@ -61,7 +64,6 @@ $(document).ready(function () {
     function smoothScrollToAnchor(selector) {
         $(selector).on('click', function (event) {
             let anchor = $.attr(this, 'href')
-
             if (anchor.match(/^#/) && anchor !== '#') {
                 event.preventDefault()
                 let offsetSize = $("header").innerHeight();
@@ -73,7 +75,6 @@ $(document).ready(function () {
     }
 
     // SLIDER-ACCORDION
-
 
     let accordionSlider;
 
@@ -226,14 +227,12 @@ $(document).ready(function () {
         $("#video-popup-wrapper").addClass("active");
         $("body").addClass("modal-open");
     });
-
     $("#close-video-popup").click(function (e) {
         $("#video-popup-wrapper").removeClass("active");
         $("body").removeClass("modal-open");
         const video = $('#video');
         video.get(0).pause();
     });
-
 
     $(window).resize(function () {
         slidersInit();
@@ -256,13 +255,15 @@ $(document).ready(function () {
 
 
     //HIDE TEXT
+
     $('.text-hide .open-up').on('click', function (e) {
         e.preventDefault();
         $('.text-hide .mob-hide').removeClass('mob-hide');
         $(this).hide();
     });
 
-//ANIMATIOON
+    //ANIMATIOON
+
     setTimeout(function () {
         $('.section-team').addClass('active');
     }, 300);

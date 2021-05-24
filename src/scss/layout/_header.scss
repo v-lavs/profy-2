@@ -210,18 +210,24 @@
     display: none;
   }
 
-  &_white {
-
-    .background--dark {
-      filter: invert(1);
-    }
-
-    .btn-burger {
-      .line {
-        background-color: #000000;
+  //&_white {
+  //
+  //  .background--dark {
+  //    filter: invert(1);
+  //  }
+  //
+  //  .btn-burger {
+  //    .line {
+  //      background-color: #000000;
+  //    }
+  //
+  //  }
+  //}
+  .background--dark {
+        filter: invert(1);
       }
-
-    }
+  .background--white {
+    filter: invert(1);
   }
 
   .link-bar-mob {
@@ -247,7 +253,6 @@
         transform: translate(-150%, 150%);
       }
     }
-
   }
 
   @include respond-to($xl) {
@@ -289,7 +294,6 @@
       }
     }
   }
-
   @include respond-to($sm) {
     &:not(.header_home){
       background-color: $white;

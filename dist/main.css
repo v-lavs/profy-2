@@ -233,6 +233,18 @@ body.modal-open {
   opacity: 1;
 }
 
+.backdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000000;
+  opacity: 0.25;
+  z-index: 500;
+}
+
 .btn {
   display: inline-block;
   cursor: pointer;
@@ -1358,12 +1370,12 @@ body.modal-open {
   display: none;
 }
 
-.header_white .background--dark {
+.header .background--dark {
   filter: invert(1);
 }
 
-.header_white .btn-burger .line {
-  background-color: #000000;
+.header .background--white {
+  filter: invert(1);
 }
 
 .header .link-bar-mob {
