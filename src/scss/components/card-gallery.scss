@@ -17,9 +17,10 @@
     transform: translate(-50%, -50%) scale(1);
     transition: .45s;
 
-    &:hover, &:focus {
-      transform: translate(-50%, -50%) scale(1.1);
-    }
+    //&:hover,
+    //&:focus {
+    //  transform: translate(-50%, -50%) scale(1.1);
+    //}
   }
   &__title {
     margin-bottom: 4px;

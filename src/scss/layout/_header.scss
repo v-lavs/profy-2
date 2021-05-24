@@ -104,8 +104,7 @@
       }
     }
 
-    &:hover,
-    &:focus {
+    &:hover {
       transform: scale(1.5, 1);
     }
 
@@ -118,7 +117,7 @@
   }
 
   .header__nav {
-    padding: 20px 20px 65px 20px;
+    padding: 90px 20px 75px;
     position: fixed;
     right: 0;
     top: 0;
@@ -132,8 +131,8 @@
     visibility: hidden;
     z-index: 900;
     width: 100%;
-    height: 100vh;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
     max-height: 100%;
 
     .header {
@@ -165,16 +164,17 @@
       bottom: 0;
       left: 0;
       right: 0;
-      z-index: 1;
-      height: 0;
+      height: 75px;
       overflow: hidden;
+      transform: translateY(100%);
       transition: .5s;
+      z-index: 1;
 
       &__item {
         width: 33.33%;
         position: relative;
         font-size: 15px;
-        font-weight: 700;
+        font-weight: 600;
         color: $white;
         background-color: rgba(255, 255, 255, 0.5);
         text-align: center;
@@ -199,12 +199,12 @@
       &__link {
         display: block;
         opacity: 0;
-        padding: 22px 33px 38px;
+        padding: 20px 8px;
 
       }
 
       &.open-list {
-        height: 80px;
+        transform: translateY(0);
 
         .list__link {
           opacity: 1;
@@ -307,8 +307,12 @@
       background-color: $white;
     }
     padding: 20px 0;
+    .btn-burger:hover {
+      transform: none;
+    }
     .header__nav {
       flex-direction: column;
+      justify-content: space-around;
 
       .header__logo {
         display: block;
@@ -326,11 +330,6 @@
       .menu {
         transform: translateX(0);
         opacity: 1;
-
-        &__item:nth-child(2) {
-          transform: translate(-150%, 150%);
-          opacity: 0;
-        }
       }
 
       &.open {
@@ -366,6 +365,7 @@
 
       .lang-switch__link_active {
         color: #ffffff;
+        display: none;
       }
     }
     .header__logo {
@@ -373,24 +373,16 @@
       z-index: 1;
     }
 
-
     .btn-burger {
       order: -1;
       height: 22px;
       overflow: hidden;
-      &:hover,
-      &:focus{
-        //transform: none;
-      }
     }
     .menu {
-      margin-bottom: 109px;
+      margin-bottom: 50px;
     }
-
   }
-  @include respond-to($sm) {
 
-  }
   @include respond-to($xs) {
     .link-bar-mob {
       &__item img {
@@ -399,6 +391,12 @@
     }
     .lang-switch {
       font-size: 13px;
+    }
+  }
+
+  @media (orientation: portrait) and (max-height: 600px) {
+    .menu__item {
+      margin-bottom: 40px;
     }
   }
 }

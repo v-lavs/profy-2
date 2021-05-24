@@ -4,8 +4,8 @@
   text-align: center;
   opacity: 0;
   transform: translateX(-100%);
+
   &__item {
-    position: relative;
     transition: .35s;
     color: $white;
     line-height: 1.2;

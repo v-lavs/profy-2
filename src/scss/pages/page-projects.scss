@@ -9,11 +9,11 @@
 
     .card-gallery {
       padding: 0 54px;
-      margin-bottom: 9.25%;
+      margin-bottom: 65px;
       width: 50%;
 
       &__wrap-thumb {
-        padding-top: 79%;
+        padding-top: 73.5%;
         margin-bottom: 18px;
       }
     }
@@ -84,3 +84,12 @@
   }
 }
 
+.mouse-parallax {
+
+  overflow: hidden;
+}
+.mouse-parallax-bg {
+  width: 110%;
+  height: 110%;
+  transition: all 0.1s ease;
+}

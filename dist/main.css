@@ -329,7 +329,6 @@ body.modal-open {
 }
 
 .menu__item {
-  position: relative;
   transition: .35s;
   color: #ffffff;
   line-height: 1.2;
@@ -807,11 +806,6 @@ body.modal-open {
   transition: .45s;
 }
 
-.card-gallery__thumb:hover,
-.card-gallery__thumb:focus {
-  transform: translate(-50%, -50%) scale(1.1);
-}
-
 .card-gallery__title {
   margin-bottom: 4px;
   font-size: 22px;
@@ -844,13 +838,17 @@ body.modal-open {
 }
 
 .section-banner .banner__slide {
-  min-height: 100vh;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  height: 100vh;
   display: flex;
   align-items: center;
   overflow: hidden;
+}
+
+.section-banner .banner__slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .section-banner .scroll-down {
@@ -1265,8 +1263,7 @@ body.modal-open {
   left: 8px;
 }
 
-.header .btn-burger:hover,
-.header .btn-burger:focus {
+.header .btn-burger:hover {
   transform: scale(1.5, 1);
 }
 
@@ -1276,7 +1273,7 @@ body.modal-open {
 }
 
 .header .header__nav {
-  padding: 20px 20px 65px 20px;
+  padding: 90px 20px 75px;
   position: fixed;
   right: 0;
   top: 0;
@@ -1290,8 +1287,8 @@ body.modal-open {
   visibility: hidden;
   z-index: 900;
   width: 100%;
-  height: 100vh;
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   max-height: 100%;
 }
 
@@ -1323,17 +1320,18 @@ body.modal-open {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 1;
-  height: 0;
+  height: 75px;
   overflow: hidden;
+  transform: translateY(100%);
   transition: .5s;
+  z-index: 1;
 }
 
 .header .header__nav .list__item {
   width: 33.33%;
   position: relative;
   font-size: 15px;
-  font-weight: 700;
+  font-weight: 600;
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.5);
   text-align: center;
@@ -1358,11 +1356,11 @@ body.modal-open {
 .header .header__nav .list__link {
   display: block;
   opacity: 0;
-  padding: 22px 33px 38px;
+  padding: 20px 8px;
 }
 
 .header .header__nav .list.open-list {
-  height: 80px;
+  transform: translateY(0);
 }
 
 .header .header__nav .list.open-list .list__link {
@@ -1517,17 +1515,27 @@ body.modal-open {
 
 .page-projects .section-gallery .card-gallery {
   padding: 0 54px;
-  margin-bottom: 9.25%;
+  margin-bottom: 65px;
   width: 50%;
 }
 
 .page-projects .section-gallery .card-gallery__wrap-thumb {
-  padding-top: 79%;
+  padding-top: 73.5%;
   margin-bottom: 18px;
 }
 
 .page-projects .section-gallery .block-logo {
   display: none;
+}
+
+.mouse-parallax {
+  overflow: hidden;
+}
+
+.mouse-parallax-bg {
+  width: 110%;
+  height: 110%;
+  transition: all 0.1s ease;
 }
 
 .page-services {
@@ -1685,11 +1693,15 @@ body.modal-open {
 }
 
 .single-project .main__img {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  min-height: 100vh;
+  height: 100vh;
   margin-bottom: 70px;
+}
+
+.single-project .main__img img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .single-project .related-post {
@@ -2501,8 +2513,13 @@ body.modal-open {
     background-color: #ffffff;
   }
 
+  .header .btn-burger:hover {
+    transform: none;
+  }
+
   .header .header__nav {
     flex-direction: column;
+    justify-content: space-around;
   }
 
   .header .header__nav .header__logo {
@@ -2521,11 +2538,6 @@ body.modal-open {
   .header .header__nav .menu {
     transform: translateX(0);
     opacity: 1;
-  }
-
-  .header .header__nav .menu__item:nth-child(2) {
-    transform: translate(-150%, 150%);
-    opacity: 0;
   }
 
   .header .header__nav.open .menu__item:nth-child(2) {
@@ -2560,6 +2572,7 @@ body.modal-open {
 
   .header .lang-switch_mob .lang-switch__link_active {
     color: #ffffff;
+    display: none;
   }
 
   .header .header__logo {
@@ -2574,7 +2587,7 @@ body.modal-open {
   }
 
   .header .menu {
-    margin-bottom: 109px;
+    margin-bottom: 50px;
   }
 
   .footer .infinite-line {
@@ -2831,5 +2844,11 @@ body.modal-open {
 
   .single-project .related-post .card-gallery__title {
     font-size: 13px;
+  }
+}
+
+@media (orientation: portrait) and (max-height: 600px) {
+  .header .menu__item {
+    margin-bottom: 40px;
   }
 }

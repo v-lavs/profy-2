@@ -4,17 +4,13 @@
 
 //= include ../../node_modules/jquery/dist/jquery.js ;
 //= include ../lib/waypoints/index.js
+//= include ../lib/tilt.jquery.js
 //= include ../lib/bg-check.js
 
 
 // CUSTOM SCRIPTS
 
 $(document).ready(function () {
-    BackgroundCheck.init({
-        targets: '.ui',
-        windowEvents:true,
-    });
-
     // MOBILE MENU
 
     const nav = $('.header__nav');
@@ -25,11 +21,12 @@ $(document).ready(function () {
         $(this).toggleClass('open');
         $('body').toggleClass('modal-open');
     });
-    // $('.menu__link').on('click', function (e) {
-    //     nav.removeClass('open');
-    //     $('.btn-burger').toggleClass('open');
-    //     $('body').toggleClass('modal-open');
-    // });
+
+    $('.menu__link').on('click', function (e) {
+        nav.removeClass('open');
+        $('.btn-burger').removeClass('open');
+        $('body').removeClass('modal-open');
+    });
 
     //OPEN LIST BRIFS
 
@@ -53,6 +50,7 @@ $(document).ready(function () {
         $('.backdrop').fadeIn();
         $('body').addClass('modal-open')
     });
+
     $('.btn-close, .backdrop').click(function (e) {
         e.preventDefault();
         blockWritten.removeClass('open');
@@ -151,6 +149,17 @@ $(document).ready(function () {
         autoplay: {
             delay: 6000,
         },
+        on: {
+            slideChange: function () {
+                BackgroundCheck.refresh();
+                console.log('swiper slideChange');
+            },
+        },
+    });
+
+
+    BackgroundCheck.init({
+        targets: '.ui',
     });
 
 
