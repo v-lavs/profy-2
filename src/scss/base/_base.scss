@@ -21,7 +21,7 @@ body {
   }
 }
 
-.page{
+.page {
   padding-top: 95px;
 }
 
@@ -38,10 +38,22 @@ body {
 
 .section {
   &__title {
-    font-size: 80px;
-    font-weight: 400;
-    color: $gray-100;
+    position: relative;
+    font-size: 65px;
+    font-weight: 300;
+    color: #c8c8c8;
     text-transform: uppercase;
+    padding-bottom: 60px;
+    margin-bottom: 30px;
+    &:before{
+      position: absolute;
+      content: '';
+      left: 0;
+      bottom: 0;
+      height: 2px;
+      width: 194px;
+      background-color: #fbe200;
+    }
     @include respond-to($lg) {
       font-size: 60px;
     }
@@ -66,6 +78,7 @@ body {
       margin-bottom: 0;
     }
   }
+
   img {
     width: 100%;
     height: auto;
@@ -76,6 +89,7 @@ body {
   @include respond-to($md) {
     p {
       margin-bottom: 25px;
+
       &:last-of-type {
         margin-bottom: 0;
       }
@@ -118,13 +132,14 @@ body {
 
   .img_written {
     vertical-align: middle;
-    -webkit-animation:spin 4s linear infinite;
-    -moz-animation:spin 4s linear infinite;
-    animation:spin 4s linear infinite;
+    -webkit-animation: spin 4s linear infinite;
+    -moz-animation: spin 4s linear infinite;
+    animation: spin 4s linear infinite;
     width: 100%;
     height: auto;
   }
-  .wrap-img-written{
+
+  .wrap-img-written {
     display: inline-block;
     background-image: url('../assets/img/svg/big-logo.svg');
     background-position: center;
@@ -133,9 +148,13 @@ body {
     background-repeat: no-repeat;
 
   }
-  @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-  @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-  @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+  @keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
 
   @include respond-to($xxl) {
     width: 76px;
@@ -146,19 +165,20 @@ body {
     width: 57px;
     height: 57px;
     right: 12px;
-    .wrap-img-written{
+    .wrap-img-written {
       -webkit-background-size: 18px;
       background-size: 18px;
     }
   }
 }
+
 .section_anim {
-      opacity: 0;
-    -webkit-transition: opacity ease-in .5s;
+  opacity: 0;
+  -webkit-transition: opacity ease-in .5s;
 }
 
 .section_in-view {
-    opacity: 1;
+  opacity: 1;
 }
 
 .backdrop {

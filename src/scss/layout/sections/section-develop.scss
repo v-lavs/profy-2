@@ -3,8 +3,9 @@
   background-color: $white;
   padding-top: 4%;
   padding-bottom: 14.75%;
-  .section__title {
-    margin-bottom: 50px;
+
+  .section__heading {
+    width: 305px;
   }
 
   .develop {
@@ -185,7 +186,7 @@
     &:before {
       top: 7%;
     }
-    .section__title{
+    .section__title {
       margin-bottom: 32px;
     }
     .develop__card:last-of-type {
