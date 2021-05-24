@@ -1529,8 +1529,18 @@ body.modal-open {
   width: 50%;
 }
 
-.page-projects .section-gallery .card-gallery__wrap-thumb {
+.page-projects .section-gallery .card-gallery .inner {
+  margin-bottom: 18px;
   padding-top: 73.5%;
+  position: relative;
+}
+
+.page-projects .section-gallery .card-gallery__wrap-thumb {
+  position: absolute;
+  width: 105%;
+  height: 105%;
+  top: -15px;
+  left: -15px;
 }
 
 .page-projects .section-gallery .card-gallery__thumb:hover,
@@ -1540,16 +1550,6 @@ body.modal-open {
 
 .page-projects .section-gallery .block-logo {
   display: none;
-}
-
-.mouse-parallax {
-  overflow: hidden;
-}
-
-.mouse-parallax-bg {
-  width: 110%;
-  height: 110%;
-  transition: all 0.1s ease;
 }
 
 .page-services {

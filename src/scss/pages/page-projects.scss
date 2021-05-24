@@ -11,9 +11,17 @@
       padding: 0 54px;
       margin-bottom: 65px;
       width: 50%;
-
-      &__wrap-thumb {
+      .inner {
+        margin-bottom: 18px;
         padding-top: 73.5%;
+        position: relative;
+      }
+      &__wrap-thumb {
+        position: absolute;
+        width: 105%;
+        height: 105%;
+        top: -15px;
+        left: -15px;
       }
 
       &__thumb {
@@ -88,15 +96,4 @@
       }
     }
   }
-}
-
-.mouse-parallax {
-
-  overflow: hidden;
-}
-
-.mouse-parallax-bg {
-  width: 110%;
-  height: 110%;
-  transition: all 0.1s ease;
 }
