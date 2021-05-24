@@ -32,7 +32,7 @@ $(document).ready(function () {
 
     $('#openListBrief').on('click', function (e) {
         // e.preventDefault();
-        $('.header__nav .list').addClass('open-list');
+        $('.header__nav .list').toggleClass('open-list');
 
     });
     $('.btn-burger, .list__link').click(function (e) {
