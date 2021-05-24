@@ -305,6 +305,11 @@
   @include respond-to($sm) {
     &:not(.header_home) {
       background-color: $white;
+      .ui.background--dark,
+      .ui.background--white {
+        -webkit-filter: none;
+        filter: none;
+      }
     }
     padding: 20px 0;
     .btn-burger:hover {

@@ -2513,6 +2513,12 @@ body.modal-open {
     background-color: #ffffff;
   }
 
+  .header:not(.header_home) .ui.background--dark,
+  .header:not(.header_home) .ui.background--white {
+    -webkit-filter: none;
+    filter: none;
+  }
+
   .header .btn-burger:hover {
     transform: none;
   }
