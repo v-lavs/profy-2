@@ -1,41 +1,63 @@
 .section-develop {
-  position: relative;
   background-color: $white;
-  padding-top: 4%;
-  padding-bottom: 14.75%;
-.container{
   position: relative;
+  padding-bottom: 80px;
 
-}
-  .container-sticky{
+
+  .container-outer {
+    top: 0;
+    padding-top: 100px;
     position: sticky;
     height: 100vh;
-    top: 0;
     width: 100%;
     overflow: hidden;
   }
-  .container-translate{
-    position: absolute;
+
+  .container {
+    display: flex;
+    align-items: center;
+    position: relative;
     height: 100%;
   }
-  .section__heading {
-    width: 305px;
+
+  .container-sticky {
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .section__header {
+    position: absolute;
+    left: 0;
+    right: 0;
+    min-height: 436px;
+    padding-top: 40px;
+  }
+
+  .section__title {
+    width: 33%;
   }
 
   .develop {
     &__list {
+      position: relative;
       display: flex;
-      margin: 0 -45px;
+      height: 100%;
     }
 
     &__card {
       position: relative;
-      width: 25%;
-      margin: 0 10px;
-      background-color: #F2F6F6;
-      padding: 50px 35px 64px;
+      width: 50%;
+      max-width: 609px;
+      min-height: 436px;
+      margin-right: 140px;
+      padding: 50px 35px 64px 10.5%;
       font-size: 17px;
       transition: ease-in .5s;
+
+      flex-shrink: 0;
+      background-color: #F2F6F6;
 
       &:before {
         position: absolute;
@@ -52,16 +74,18 @@
         transform-origin: 0% 100%;
       }
 
-      &:hover:before {
+      &.active:before {
         transform: scaleY(1);
       }
 
-      &:hover,
-      &:focus {
+      &.active {
         .card__body p {
           overflow: visible;
           -webkit-line-clamp: inherit;
           height: auto;
+          font-size: 20px;
+          line-height: 29px;
+          color: #000;
         }
       }
     }
@@ -75,15 +99,20 @@
     &:before {
       position: absolute;
       content: '';
-      width: 35px;
-      height: 35px;
+      width: 41px;
+      height: 37px;
       display: block;
       background-image: url(../assets/img/icon1.png);
       background-repeat: no-repeat;
       background-position: center;
       background-size: contain;
       top: 4px;
-      right: 0;
+      left: -9.5%;
+      -webkit-transform: translateX(-100%);
+      -moz-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+      -o-transform: translateX(-100%);
+      transform: translateX(-100%);
     }
   }
 
@@ -106,111 +135,29 @@
   }
 
   .card__title {
-    font-size: 27px;
-    line-height: 1.37;
+    font-size: 32px;
+    line-height: 1.1;
     letter-spacing: -0.84px;
-    font-weight: 400;
+    font-weight: 500;
+    margin-bottom: 75px;
+    min-height: 71px;
   }
 
   .card__body {
     position: relative;
     z-index: 1;
     line-height: 1.5;
-    min-height: 218px;
-    display: flex;
-    align-items: center;
 
     p {
-
       -webkit-line-clamp: 3;
       display: -webkit-box;
       -webkit-box-orient: vertical;
       overflow: hidden;
+      color: #686868;
     }
   }
 
   .wrap-btn {
     text-align: right;
-  }
-
-  @include respond-to($xxl) {
-    .develop__list {
-      margin-left: 0;
-      margin-right: 0;
-      margin-bottom: 55px;
-    }
-    .develop__card {
-      padding: 28px 28px 44px;
-    }
-
-    .card__title {
-      font-size: 25px;
-    }
-    .card__heading:before {
-      width: 27px;
-      height: 27px;
-    }
-  }
-  @include respond-to($xl) {
-    .section-develop:before {
-      top: 14%;
-    }
-    .develop__list {
-      flex-wrap: wrap;
-      margin: 0 -20px;
-    }
-    .develop__card {
-      width: 43%;
-      margin: 0 20px;
-      background-color: $white;
-    }
-    .card__body p {
-      overflow: visible;
-      -webkit-line-clamp: inherit;
-    }
-  }
-  @include respond-to($lg) {
-    .develop__card {
-      margin-bottom: 40px;
-    }
-  }
-  @include respond-to($md) {
-    .develop__card {
-      width: 100%;
-    }
-  }
-  @include respond-to($sm) {
-    &:before {
-      top: 5%;
-    }
-    .card__title {
-      font-size: 27px;
-    }
-    .card__heading {
-      margin-bottom: 40px;
-      min-height: auto;
-    }
-    .card__body {
-      min-height: auto;
-    }
-  }
-  @include respond-to($xs) {
-    padding-top: 0;
-    padding-bottom: 43.75%;
-    &:before {
-      top: 7%;
-    }
-    .section__title {
-      margin-bottom: 32px;
-    }
-    .develop__card:last-of-type {
-      margin-bottom: 0;
-    }
-    .wrap-btn {
-      text-align: left;
-    }
-    .see-more {
-      margin-left: 28px;
-    }
   }
 }
