@@ -305,11 +305,11 @@ $(document).ready(function () {
             const initialOffset = $wrapper.get(0).offsetTop;
             const $card = $('.develop__card');
             const offsetTop = $sticky.get(0).offsetTop;
-            const scrollOffset = - offsetTop;
+            const scrollOffset = -offsetTop;
 
             const cardsCount = $card.length;
             const cardMargin = parseInt($card.css('marginRight'));
-            const newActive = Math.floor(Math.abs(scrollOffset) / ($card.outerWidth() * 0.35 + cardMargin));
+            const newActive = Math.floor(Math.abs(scrollOffset) / ($card.outerWidth() * 0.45 + cardMargin));
             const oldActive = $('.develop__card.active').index();
             const lastIndex = cardsCount - 1;
             const validatedIndex = newActive <= lastIndex ? newActive : lastIndex;
