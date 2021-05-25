@@ -12,6 +12,7 @@
       margin-bottom: 65px;
       width: 50%;
       .inner {
+        overflow: hidden;
         margin-bottom: 18px;
         padding-top: 73.5%;
         position: relative;
@@ -36,7 +37,6 @@
       display: none;
     }
   }
-
 
   @include respond-to($lg) {
     .section-gallery {

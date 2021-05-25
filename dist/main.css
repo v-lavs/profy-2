@@ -144,17 +144,7 @@ body.modal-open {
   border: 0;
 }
 
-.section__title {
-  position: relative;
-  font-size: 65px;
-  font-weight: 300;
-  color: #c8c8c8;
-  text-transform: uppercase;
-  padding-bottom: 60px;
-  margin-bottom: 30px;
-}
-
-.section__title:before {
+.section .decor:before {
   position: absolute;
   content: '';
   left: 0;
@@ -162,6 +152,16 @@ body.modal-open {
   height: 2px;
   width: 194px;
   background-color: #fbe200;
+  padding-bottom: 60px;
+}
+
+.section__title {
+  position: relative;
+  font-size: 65px;
+  font-weight: 300;
+  color: #c8c8c8;
+  text-transform: uppercase;
+  margin-bottom: 30px;
 }
 
 .dynamic-content p {
@@ -1530,6 +1530,7 @@ body.modal-open {
 }
 
 .page-projects .section-gallery .card-gallery .inner {
+  overflow: hidden;
   margin-bottom: 18px;
   padding-top: 73.5%;
   position: relative;
