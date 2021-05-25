@@ -10,6 +10,14 @@
   padding: 50px 0;
   transition: .35s linear;
 
+  .ui.background--dark {
+    filter: invert(1);
+  }
+
+  .ui.background--white {
+    filter: invert(0);
+  }
+
   .container {
     display: flex;
     justify-content: space-between;
@@ -156,7 +164,6 @@
         transform: translateX(-50%) translateY(0);
         transition: 550ms all 550ms linear;
       }
-
     }
 
     .list {
@@ -221,18 +228,6 @@
 
   .lang-switch_mob {
     display: none;
-  }
-
-  .ui.background--dark {
-
-    filter: invert(1);
-
-  }
-
-  .ui.background--white {
-    -webkit-filter: invert(0);
-    filter: invert(0);
-
   }
 
   .link-bar-mob {

@@ -3,7 +3,21 @@
   background-color: $white;
   padding-top: 4%;
   padding-bottom: 14.75%;
+.container{
+  position: relative;
 
+}
+  .container-sticky{
+    position: sticky;
+    height: 100vh;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+  .container-translate{
+    position: absolute;
+    height: 100%;
+  }
   .section__heading {
     width: 305px;
   }

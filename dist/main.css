@@ -1008,6 +1008,23 @@ body.modal-open {
   padding-bottom: 14.75%;
 }
 
+.section-develop .container {
+  position: relative;
+}
+
+.section-develop .container-sticky {
+  position: sticky;
+  height: 100vh;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.section-develop .container-translate {
+  position: absolute;
+  height: 100%;
+}
+
 .section-develop .section__heading {
   width: 305px;
 }
@@ -1178,6 +1195,14 @@ body.modal-open {
   color: #ffffff;
   padding: 50px 0;
   transition: .35s linear;
+}
+
+.header .ui.background--dark {
+  filter: invert(1);
+}
+
+.header .ui.background--white {
+  filter: invert(0);
 }
 
 .header .container {
@@ -1387,15 +1412,6 @@ body.modal-open {
 
 .header .lang-switch_mob {
   display: none;
-}
-
-.header .ui.background--dark {
-  filter: invert(1);
-}
-
-.header .ui.background--white {
-  -webkit-filter: invert(0);
-  filter: invert(0);
 }
 
 .header .link-bar-mob {

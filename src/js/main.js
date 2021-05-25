@@ -147,7 +147,7 @@ $(document).ready(function () {
         effect: 'fade',
         speed: 800,
         autoplay: {
-            delay: 6000,
+            delay: 3000,
         },
         on: {
             slideChange: function () {
