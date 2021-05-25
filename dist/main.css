@@ -144,17 +144,6 @@ body.modal-open {
   border: 0;
 }
 
-.section .decor:before {
-  position: absolute;
-  content: '';
-  left: 0;
-  bottom: 0;
-  height: 2px;
-  width: 194px;
-  background-color: #fbe200;
-  padding-bottom: 60px;
-}
-
 .section__title {
   position: relative;
   font-size: 65px;
@@ -162,6 +151,20 @@ body.modal-open {
   color: #c8c8c8;
   text-transform: uppercase;
   margin-bottom: 30px;
+}
+
+.section__title.decor {
+  padding-bottom: 60px;
+}
+
+.section__title.decor:before {
+  position: absolute;
+  content: '';
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 194px;
+  background-color: #fbe200;
 }
 
 .dynamic-content p {

@@ -37,18 +37,7 @@ body {
 }
 
 .section {
-  .decor{
-    &:before{
-      position: absolute;
-      content: '';
-      left: 0;
-      bottom: 0;
-      height: 2px;
-      width: 194px;
-      background-color: #fbe200;
-      padding-bottom: 60px;
-    }
-  }
+
   &__title {
     position: relative;
     font-size: 65px;
@@ -56,6 +45,19 @@ body {
     color: #c8c8c8;
     text-transform: uppercase;
     margin-bottom: 30px;
+    &.decor{
+      padding-bottom: 60px;
+      &:before{
+        position: absolute;
+        content: '';
+        left: 0;
+        bottom: 0;
+        height: 2px;
+        width: 194px;
+        background-color: #fbe200;
+
+      }
+    }
 
     @include respond-to($lg) {
       font-size: 60px;
