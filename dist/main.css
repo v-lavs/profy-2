@@ -2237,9 +2237,13 @@ body.modal-open {
     padding-left: 52px;
   }
 
-  .accordion .panel__title .icon {
+  .accordion .panel .icon {
     left: 0;
     top: 4px;
+  }
+
+  .accordion .panel .icon svg path {
+    fill: #000000;
   }
 
   .accordion .panel-collapse__body {
