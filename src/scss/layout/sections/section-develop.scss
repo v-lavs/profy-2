@@ -1,7 +1,7 @@
 .section-develop {
   background-color: $white;
   position: relative;
-  padding-bottom: 80px;
+  padding-bottom: 9%;
 
 
   .container-outer {
@@ -84,6 +84,7 @@
           -webkit-line-clamp: inherit;
           height: auto;
           font-size: 20px;
+          font-weight: 400;
           line-height: 29px;
           color: #000;
         }
@@ -149,6 +150,8 @@
     line-height: 1.5;
 
     p {
+      font-weight: 300;
+      font-size: 17px;
       -webkit-line-clamp: 3;
       display: -webkit-box;
       -webkit-box-orient: vertical;
@@ -159,5 +162,22 @@
 
   .wrap-btn {
     text-align: right;
+  }
+
+  @include respond-to($xxl) {
+    padding-bottom: 250px;
+  }
+  @include respond-to($xxl) {
+    .section__title {
+      font-size: 45px;
+
+      .decor {
+        padding-bottom: 40px;
+      }
+    }
+    .card__title {
+      font-size: 27px;
+
+    }
   }
 }

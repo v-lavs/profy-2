@@ -1003,7 +1003,7 @@ body.modal-open {
 .section-develop {
   background-color: #ffffff;
   position: relative;
-  padding-bottom: 80px;
+  padding-bottom: 9%;
 }
 
 .section-develop .container-outer {
@@ -1084,6 +1084,7 @@ body.modal-open {
   -webkit-line-clamp: inherit;
   height: auto;
   font-size: 20px;
+  font-weight: 400;
   line-height: 29px;
   color: #000;
 }
@@ -1141,6 +1142,8 @@ body.modal-open {
 }
 
 .section-develop .card__body p {
+  font-weight: 300;
+  font-size: 17px;
   -webkit-line-clamp: 3;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -1905,6 +1908,26 @@ body.modal-open {
 
   .form .dropdown {
     margin-left: 50px;
+  }
+
+  .section-partners {
+    padding-bottom: 0;
+  }
+
+  .section-develop {
+    padding-bottom: 250px;
+  }
+
+  .section-develop .section__title {
+    font-size: 45px;
+  }
+
+  .section-develop .section__title .decor {
+    padding-bottom: 40px;
+  }
+
+  .section-develop .card__title {
+    font-size: 27px;
   }
 
   .container {

@@ -40,9 +40,11 @@
       height: auto;
     }
   }
+  @include respond-to($xxl){
+    padding-bottom: 0;
+  }
   @include respond-to($xl){
     .partner-block img {
-      //max-height: 75%;
     }
   }
   @include respond-to($sm){
