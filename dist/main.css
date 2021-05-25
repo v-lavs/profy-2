@@ -1091,7 +1091,6 @@ body.modal-open {
 
 .section-develop .card__heading {
   position: relative;
-  padding-right: 35px;
   min-height: 66px;
 }
 
@@ -1858,6 +1857,39 @@ body.modal-open {
 }
 
 @media only screen and (max-width: 1661px) {
+  .section-develop {
+    padding-bottom: 250px;
+  }
+
+  .section-develop .section__title {
+    font-size: 45px;
+  }
+
+  .section-develop .section__title .decor {
+    padding-bottom: 30px;
+  }
+
+  .section-develop .container-sticky {
+    left: 35%;
+  }
+
+  .section-develop .develop__card {
+    margin-right: 100px;
+  }
+
+  .section-develop .card__title {
+    font-size: 27px;
+  }
+
+  .section-develop .card__heading:before {
+    width: 31px;
+    height: 28px;
+  }
+
+  .section-develop .card__body p {
+    font-size: 16px;
+  }
+
   .container {
     max-width: 1240px;
     padding: 0 25px;
@@ -1914,22 +1946,6 @@ body.modal-open {
     padding-bottom: 0;
   }
 
-  .section-develop {
-    padding-bottom: 250px;
-  }
-
-  .section-develop .section__title {
-    font-size: 45px;
-  }
-
-  .section-develop .section__title .decor {
-    padding-bottom: 40px;
-  }
-
-  .section-develop .card__title {
-    font-size: 27px;
-  }
-
   .container {
     max-width: 1120px;
   }
@@ -1958,6 +1974,19 @@ body.modal-open {
 
   .form .form__footer .dropdown {
     margin: 0;
+  }
+
+  .section-develop {
+    padding-bottom: 160px;
+  }
+
+  .section-develop .develop__card {
+    max-width: 550px;
+    margin-right: 55px;
+  }
+
+  .section-develop .card__title {
+    margin-bottom: 46px;
   }
 
   .section-contacts .section__slogan {
@@ -2086,6 +2115,68 @@ body.modal-open {
 
   .section-gallery .logo-link:nth-child(2) {
     padding-left: 55px;
+  }
+
+  .section-develop .container-outer {
+    padding-top: 0;
+    position: static;
+    height: auto;
+  }
+
+  .section-develop .container-outer .container {
+    flex-wrap: wrap;
+  }
+
+  .section-develop .container-outer .section__header {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: 0;
+    margin-bottom: 56px;
+  }
+
+  .section-develop .container-outer .section__header .decor {
+    padding-bottom: 0;
+  }
+
+  .section-develop .container-outer .section__header .decor:before {
+    display: none;
+  }
+
+  .section-develop .container-outer .container-sticky {
+    position: relative;
+    left: 0;
+    top: 0;
+    transform: none;
+  }
+
+  .section-develop .container-outer .develop__list {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .section-develop .develop__card {
+    width: 48%;
+    margin-right: 0;
+    border-bottom: 1px solid #fbd300;
+    padding-left: 0;
+    background-color: #ffffff;
+  }
+
+  .section-develop .card__title {
+    padding-left: 66px;
+    margin-bottom: 20px;
+  }
+
+  .section-develop .card__heading:before {
+    left: 18.5%;
+  }
+
+  .section-develop .card__body p {
+    overflow: visible;
+    -webkit-line-clamp: inherit;
+    height: auto;
+    font-size: 16px;
   }
 
   .section-contacts .section__slogan {
@@ -2475,6 +2566,14 @@ body.modal-open {
     min-width: 40vw;
   }
 
+  .section-develop .develop__card {
+    width: 100%;
+  }
+
+  .section-develop .card__heading:before {
+    left: 12.5%;
+  }
+
   .section-contacts {
     padding-bottom: 63px;
   }
@@ -2784,7 +2883,7 @@ body.modal-open {
 
   .container {
     max-width: 100%;
-    padding: 0 12px;
+    padding: 0 15px;
   }
 
   .header .lang-switch {
@@ -2849,6 +2948,12 @@ body.modal-open {
 
   .single-project .related-post .card-gallery__title {
     font-size: 13px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .page-services .section-team .section__heading .section__title {
+    font-size: 56px;
   }
 }
 

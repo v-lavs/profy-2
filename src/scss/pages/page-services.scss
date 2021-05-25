@@ -319,5 +319,12 @@
       }
     }
   }
+  @media only screen and (max-width: 360px){
+    .section-team{
+      .section__heading .section__title {
+        font-size: 56px;
+      }
+    }
+  }
 }
 

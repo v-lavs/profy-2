@@ -94,7 +94,6 @@
 
   .card__heading {
     position: relative;
-    padding-right: 35px;
     min-height: 66px;
 
     &:before {
@@ -164,20 +163,109 @@
     text-align: right;
   }
 
-  @include respond-to($xxl) {
+  @media only screen and (max-width: 1661px) {
     padding-bottom: 250px;
-  }
-  @include respond-to($xxl) {
     .section__title {
       font-size: 45px;
 
       .decor {
-        padding-bottom: 40px;
+        padding-bottom: 30px;
       }
+    }
+
+    .container-sticky {
+      left: 35%;
+    }
+    .develop__card {
+      margin-right: 100px;
     }
     .card__title {
       font-size: 27px;
+    }
+    .card__heading:before {
+      width: 31px;
+      height: 28px;
 
+    }
+    .card__body p {
+      font-size: 16px;
+    }
+  }
+  @include respond-to($xl){
+    padding-bottom: 160px;
+    .develop__card {
+      max-width: 550px;
+      margin-right: 55px;
+    }
+    .card__title {
+      margin-bottom: 46px;
+    }
+  }
+  @include respond-to($lg){
+
+    .container-outer {
+      padding-top: 0;
+      position: static;
+      height: auto;
+
+      .container{
+        flex-wrap: wrap;
+      }
+      .section__header{
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        margin-bottom: 56px;
+        .decor{
+          padding-bottom: 0;
+          &:before{
+            display: none;
+          }
+        }
+      }
+      .container-sticky{
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: none;
+      }
+      .develop__list{
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+    }
+    .develop__card {
+      width: 48%;
+      margin-right: 0;
+      border-bottom: 1px solid $yellow;
+      padding-left: 0;
+      background-color: #ffffff;
+    }
+    .card__title{
+      padding-left: 66px;
+      margin-bottom: 20px;
+
+    }
+    .card__heading {
+
+      &:before{
+        left: 18.5%;
+      }
+    }
+    .card__body p{
+      overflow: visible;
+      -webkit-line-clamp: inherit;
+      height: auto;
+      font-size: 16px;
+    }
+  }
+  @include respond-to($sm){
+    .develop__card{
+      width: 100%;
+    }
+    .card__heading:before {
+      left: 12.5%;
     }
   }
 }
