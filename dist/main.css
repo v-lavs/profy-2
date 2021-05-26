@@ -1275,6 +1275,7 @@ body.modal-open {
   transform: rotate(0deg);
   transition: .5s ease-in-out;
   z-index: 950;
+  mix-blend-mode: difference;
 }
 
 .header .btn-burger .line {
@@ -1473,6 +1474,10 @@ body.modal-open {
   top: 3px;
   left: 50%;
   transform: translate(-150%, 150%);
+}
+
+.header .btn-burger.open.ui.background--dark {
+  filter: none;
 }
 
 .footer {
@@ -2186,6 +2191,7 @@ body.modal-open {
     font-size: 16px;
     font-weight: 300;
     line-height: 1.5;
+    color: #686868;
   }
 
   .section-develop .card__title {

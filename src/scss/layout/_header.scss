@@ -27,6 +27,7 @@
     width: 163px;
     height: auto;
     display: block;
+
   }
 
   .header__logo_mob {
@@ -61,7 +62,7 @@
     transform: rotate(0deg);
     transition: .5s ease-in-out;
     z-index: 950;
-
+    mix-blend-mode: difference;
     .line {
       display: block;
       position: absolute;
@@ -418,3 +419,6 @@
   }
 }
 
+.header .btn-burger.open.ui.background--dark{
+  filter: none;
+}

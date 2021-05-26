@@ -147,14 +147,22 @@ $(document).ready(function () {
         effect: 'fade',
         speed: 800,
         autoplay: {
-            delay: 3000,
+            delay: 4500,
         },
         on: {
             slideChange: function () {
                 BackgroundCheck.refresh();
-                console.log('swiper slideChange');
             },
         },
+        // on: function () {
+        //     BackgroundCheck.init({
+        //         targets: '.ui',
+        //         images: '.swiper-container img'
+        //     });
+        // },
+        // after: function () {
+        //     BackgroundCheck.refresh();
+        // }
     });
 
 
@@ -229,32 +237,12 @@ $(document).ready(function () {
         }
     });
 
-
-    // POPUP VIDEO
-
-    $("#video-modal-trigger").click(function (e) {
-        e.preventDefault();
-        $("#video-popup-wrapper").addClass("active");
-        $("body").addClass("modal-open");
-    });
-    $("#close-video-popup").click(function (e) {
-        $("#video-popup-wrapper").removeClass("active");
-        $("body").removeClass("modal-open");
-        const video = $('#video');
-        video.get(0).pause();
-    });
-
-    $(window).resize(function () {
-        slidersInit();
-    });
-
     //STICKY BTN
 
     var sticky = new Waypoint({
         element: $('#triggerBtnSticky')[0],
         offset: '50%',
         handler: function (direction) {
-            console.log(direction === 'down', direction)
             if (direction === 'down') {
                 $('.contact-btn').addClass('sticky');
             } else if (direction === 'up') {
