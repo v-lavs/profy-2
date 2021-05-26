@@ -236,11 +236,12 @@
       }
     }
     .develop__card {
-      width: 48%;
+      width: 49%;
       margin-right: 0;
       border-bottom: 1px solid $yellow;
       padding-left: 15px;
       background-color: #ffffff;
+      min-height: auto;
     }
     .card__title{
       padding-left: 51px;
@@ -264,7 +265,6 @@
     padding-bottom: 130px;
     .develop__card{
       width: 100%;
-      min-height: auto;
       padding-bottom: 57px;
 
     }
