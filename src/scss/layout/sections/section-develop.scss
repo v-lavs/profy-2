@@ -175,7 +175,7 @@
     }
 
     .container-sticky {
-      left: 35%;
+      left: 30%;
     }
     .develop__card {
       margin-right: 100px;
@@ -203,7 +203,7 @@
     }
   }
   @include respond-to($lg) {
-    height: auto!important;
+    height: auto !important;
     .container-outer {
       padding-top: 0;
       position: static;
@@ -249,16 +249,29 @@
       padding-left: 15px;
       background-color: #ffffff;
       min-height: auto;
+
+      &:before {
+        background-color: #fff;
+
+      }
+
+      &.active {
+       .card__body p{
+         font-size: 16px;
+         font-weight: 300;
+         line-height: 1.5;
+       }
+      }
     }
     .card__title {
-      padding-left: 51px;
+      padding-left: 60px;
       margin-bottom: 20px;
 
     }
     .card__heading {
 
       &:before {
-        left: 18.5%;
+        left: 15.5%;
       }
     }
     .card__body p {
@@ -274,9 +287,6 @@
       width: 100%;
       padding-bottom: 57px;
 
-    }
-    .card__heading:before {
-      left: 12.5%;
     }
   }
 }

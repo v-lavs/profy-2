@@ -320,12 +320,11 @@ $(document).ready(function () {
             }
 
             $canvas.attr('style', `transform:translateX(${scrollOffset}px)`)
-            $(window).resize(function () {
-                if ($(window).width() <= 980) {
-                    $('.develop__card').removeClass('active');
+
+                // if ($(window).width() <= 980) {
+                //     $card.removeClass('active');
                     // $('.section-develop').style.height='auto'
-                }
-            });
+                // }
         });
     }
 
