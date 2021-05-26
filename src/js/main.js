@@ -320,10 +320,15 @@ $(document).ready(function () {
             }
 
             $canvas.attr('style', `transform:translateX(${scrollOffset}px)`)
-            if ($(window).width() <= 980) {
-                $card.removeClass('active');
-            }
+            $(window).resize(function () {
+                if ($(window).width() <= 980) {
+                    $('.develop__card').removeClass('active');
+                    // $('.section-develop').style.height='auto'
+                }
+            });
         });
     }
-        horScroll();
+
+    horScroll();
+
 });
