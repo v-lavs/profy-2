@@ -239,11 +239,11 @@
       width: 48%;
       margin-right: 0;
       border-bottom: 1px solid $yellow;
-      padding-left: 0;
+      padding-left: 15px;
       background-color: #ffffff;
     }
     .card__title{
-      padding-left: 66px;
+      padding-left: 51px;
       margin-bottom: 20px;
 
     }
@@ -261,8 +261,12 @@
     }
   }
   @include respond-to($sm){
+    padding-bottom: 130px;
     .develop__card{
       width: 100%;
+      min-height: auto;
+      padding-bottom: 57px;
+
     }
     .card__heading:before {
       left: 12.5%;

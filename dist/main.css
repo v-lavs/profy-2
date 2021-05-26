@@ -2159,12 +2159,12 @@ body.modal-open {
     width: 48%;
     margin-right: 0;
     border-bottom: 1px solid #fbd300;
-    padding-left: 0;
+    padding-left: 15px;
     background-color: #ffffff;
   }
 
   .section-develop .card__title {
-    padding-left: 66px;
+    padding-left: 51px;
     margin-bottom: 20px;
   }
 
@@ -2566,8 +2566,14 @@ body.modal-open {
     min-width: 40vw;
   }
 
+  .section-develop {
+    padding-bottom: 130px;
+  }
+
   .section-develop .develop__card {
     width: 100%;
+    min-height: auto;
+    padding-bottom: 57px;
   }
 
   .section-develop .card__heading:before {
