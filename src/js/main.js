@@ -320,10 +320,12 @@ $(document).ready(function () {
             }
 
             $canvas.attr('style', `transform:translateX(${scrollOffset}px)`)
+            if ($(window).width() < 980) {
+                $card.removeClass('active');
+                $wrapper.height('auto');
+            }
         });
     }
-
-
     horScroll();
 
 });

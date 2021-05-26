@@ -2120,7 +2120,6 @@ body.modal-open {
   .section-develop .container-outer {
     padding-top: 0;
     position: static;
-    height: auto;
   }
 
   .section-develop .container-outer .container {

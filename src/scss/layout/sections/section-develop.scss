@@ -191,7 +191,7 @@
       font-size: 16px;
     }
   }
-  @include respond-to($xl){
+  @include respond-to($xl) {
     padding-bottom: 160px;
     .develop__card {
       max-width: 550px;
@@ -201,36 +201,41 @@
       margin-bottom: 46px;
     }
   }
-  @include respond-to($lg){
-
+  @include respond-to($lg) {
     .container-outer {
       padding-top: 0;
       position: static;
-      height: auto;
 
-      .container{
+
+      .container {
         flex-wrap: wrap;
       }
-      .section__header{
+
+      .section__header {
         position: relative;
         width: 100%;
         height: auto;
         min-height: 0;
         margin-bottom: 56px;
-        .decor{
+
+        .decor {
           padding-bottom: 0;
-          &:before{
+
+          &:before {
             display: none;
           }
         }
       }
-      .container-sticky{
+
+      .container-sticky {
         position: relative;
         left: 0;
         top: 0;
         transform: none;
+
       }
-      .develop__list{
+
+      .develop__list {
         flex-wrap: wrap;
         justify-content: space-between;
       }
@@ -243,27 +248,27 @@
       background-color: #ffffff;
       min-height: auto;
     }
-    .card__title{
+    .card__title {
       padding-left: 51px;
       margin-bottom: 20px;
 
     }
     .card__heading {
 
-      &:before{
+      &:before {
         left: 18.5%;
       }
     }
-    .card__body p{
+    .card__body p {
       overflow: visible;
       -webkit-line-clamp: inherit;
       height: auto;
       font-size: 16px;
     }
   }
-  @include respond-to($sm){
+  @include respond-to($sm) {
     padding-bottom: 130px;
-    .develop__card{
+    .develop__card {
       width: 100%;
       padding-bottom: 57px;
 
