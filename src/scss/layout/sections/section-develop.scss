@@ -1,7 +1,7 @@
 .section-develop {
   background-color: $white;
   position: relative;
-
+  margin-bottom: 150px;
 
   .container-outer {
     top: 0;
@@ -277,10 +277,12 @@
     }
   }
   @include respond-to($sm) {
+    .section__header{
+      margin-bottom: 0;
+    }
     .develop__card {
       width: 100%;
       padding-bottom: 57px;
-
     }
   }
 }

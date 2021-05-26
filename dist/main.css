@@ -914,7 +914,7 @@ body.modal-open {
 .section-gallery .card-gallery__list {
   display: flex;
   flex-wrap: wrap;
-  margin: 0 -34px;
+  margin: 0 -54px;
 }
 
 .section-gallery .card-gallery {
@@ -1004,6 +1004,7 @@ body.modal-open {
 .section-develop {
   background-color: #ffffff;
   position: relative;
+  margin-bottom: 150px;
 }
 
 .section-develop .container-outer {
@@ -2582,6 +2583,10 @@ body.modal-open {
   .section-partners .partner-block {
     height: 60px;
     min-width: 40vw;
+  }
+
+  .section-develop .section__header {
+    margin-bottom: 0;
   }
 
   .section-develop .develop__card {

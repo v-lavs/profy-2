@@ -151,18 +151,14 @@ $(document).ready(function () {
         },
         on: {
             slideChange: function () {
-                BackgroundCheck.refresh();
+                setTimeout(()=> {
+
+                console.log('slideChange');
+                    console.log(BackgroundCheck.getImageData());
+                    BackgroundCheck.refresh();
+                }, 1000)
             },
         },
-        // on: function () {
-        //     BackgroundCheck.init({
-        //         targets: '.ui',
-        //         images: '.swiper-container img'
-        //     });
-        // },
-        // after: function () {
-        //     BackgroundCheck.refresh();
-        // }
     });
 
 

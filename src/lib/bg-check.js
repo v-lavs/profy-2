@@ -716,6 +716,7 @@
      */
     function check(target, avoidClear, imageLoaded) {
         if (supported) {
+            console.log(1111)
             var mask = get('mask');
 
             log('--- BackgroundCheck ---');
