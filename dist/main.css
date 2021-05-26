@@ -918,42 +918,42 @@ body.modal-open {
 }
 
 .section-gallery .card-gallery {
-  padding: 0 34px;
+  padding: 0 54px;
+  margin-bottom: 165px;
   width: 50%;
-  margin-bottom: 130px;
-}
-
-.section-gallery .card-gallery:last-of-type {
-  margin-bottom: 0;
-}
-
-.section-gallery .card-gallery_big {
-  width: 100%;
-}
-
-.section-gallery .card-gallery__wrap-thumb {
-  padding-top: 80%;
-}
-
-.section-gallery .card-gallery__wrap-thumb_big {
-  padding-top: 57%;
-}
-
-.section-gallery .card-gallery__body {
-  padding: 0 0 30px;
-}
-
-.section-gallery .card-gallery__text {
-  opacity: .6;
-}
-
-.section-gallery .card-gallery__title {
-  margin-bottom: 0;
 }
 
 .section-gallery .card-gallery .inner {
   overflow: hidden;
-  margin-bottom: 26px;
+  margin-bottom: 18px;
+  padding-top: 73.5%;
+  position: relative;
+}
+
+.section-gallery .card-gallery .inner_big {
+  padding-top: 57%;
+}
+
+.section-gallery .card-gallery__text {
+  color: #666666;
+}
+
+.section-gallery .card-gallery__wrap-thumb {
+  position: absolute;
+  width: 105%;
+  height: 105%;
+  top: -15px;
+  left: -15px;
+}
+
+.section-gallery .card-gallery__thumb:hover,
+.section-gallery .card-gallery__thumb:focus {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.section-gallery .card-gallery_big {
+  width: 100%;
+  margin-bottom: 75px;
 }
 
 .section-partners {
@@ -1004,12 +1004,10 @@ body.modal-open {
 .section-develop {
   background-color: #ffffff;
   position: relative;
-  padding-bottom: 9%;
 }
 
 .section-develop .container-outer {
   top: 0;
-  padding-top: 100px;
   position: sticky;
   height: 100vh;
   width: 100%;
@@ -1216,7 +1214,7 @@ body.modal-open {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 550;
+  z-index: 750;
   background-color: transparent;
   line-height: 1.28;
   color: #ffffff;
@@ -1275,7 +1273,6 @@ body.modal-open {
   transform: rotate(0deg);
   transition: .5s ease-in-out;
   z-index: 950;
-  mix-blend-mode: difference;
 }
 
 .header .btn-burger .line {
@@ -1359,7 +1356,7 @@ body.modal-open {
 
 .header .header__nav .header {
   background-color: transparent;
-  z-index: 1;
+  z-index: 0;
 }
 
 .header .header__nav.open {
@@ -1872,10 +1869,6 @@ body.modal-open {
 }
 
 @media only screen and (max-width: 1661px) {
-  .section-develop {
-    padding-bottom: 250px;
-  }
-
   .section-develop .section__title {
     font-size: 45px;
   }
@@ -1991,12 +1984,7 @@ body.modal-open {
     margin: 0;
   }
 
-  .section-develop {
-    padding-bottom: 160px;
-  }
-
   .section-develop .develop__card {
-    max-width: 550px;
     margin-right: 55px;
   }
 
@@ -2119,9 +2107,12 @@ body.modal-open {
     height: 5px;
   }
 
+  .section-gallery .card-gallery__list {
+    margin: 0 -25px;
+  }
+
   .section-gallery .card-gallery {
-    padding-left: 10px;
-    padding-right: 10px;
+    padding: 0 25px;
   }
 
   .section-gallery .logo-link:nth-child(1) {
@@ -2130,10 +2121,6 @@ body.modal-open {
 
   .section-gallery .logo-link:nth-child(2) {
     padding-left: 55px;
-  }
-
-  .section-develop {
-    height: auto !important;
   }
 
   .section-develop .container-outer {
@@ -2595,10 +2582,6 @@ body.modal-open {
   .section-partners .partner-block {
     height: 60px;
     min-width: 40vw;
-  }
-
-  .section-develop {
-    padding-bottom: 130px;
   }
 
   .section-develop .develop__card {

@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 550;
+  z-index: 750;
   background-color: transparent;
   line-height: 1.28;
   color: $white;
@@ -62,7 +62,7 @@
     transform: rotate(0deg);
     transition: .5s ease-in-out;
     z-index: 950;
-    mix-blend-mode: difference;
+
     .line {
       display: block;
       position: absolute;
@@ -146,7 +146,7 @@
 
     .header {
       background-color: transparent;
-      z-index: 1;
+      z-index: 0;
     }
 
     &.open {
@@ -311,7 +311,6 @@
   @include respond-to($sm) {
     &:not(.header_home) {
       background-color: $white;
-
       .ui.background--dark,
       .ui.background--white {
         -webkit-filter: none;

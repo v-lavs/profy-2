@@ -275,8 +275,8 @@ $(document).ready(function () {
     }, 300);
 
 
-    if ($(window).width() < 768) {
-        const tilt = $('.js-tilt').tilt()
+    if ($(window).outerWidth() < 768) {
+        const tilt = $('.js-tilt').tilt();
         tilt.methods.destroy.call(tilt);
     }
 
@@ -285,35 +285,44 @@ $(document).ready(function () {
         const $canvas = $('#horizontalScrollCanvas');
         const $sticky = $('#horizontalScrollScene');
         const $wrapper = $('.section-develop');
-        const canvasWidth = $canvas.get(0).scrollWidth;
 
-        $wrapper.height(canvasWidth);
+        function intiDimensions() {
+            if ($(window).outerWidth() < 980) {
+                $wrapper.css('height', 'auto');
+            } else {
+                const vw = window.innerWidth;
+                const vh = window.innerHeight;
+                const canvasWidth = $canvas.get(0).scrollWidth + vh - $('.develop__card').width() ;
+                $wrapper.height(canvasWidth);
+                $(window).scroll(function () {
+                    const $card = $('.develop__card');
+                    const offsetTop = $sticky.get(0).offsetTop;
+                    const scrollOffset = -offsetTop;
+                    const cardsCount = $card.length;
+                    const cardMargin = parseInt($card.css('marginRight'));
+                    const newActive = Math.floor(Math.abs(scrollOffset) / ($card.innerWidth() * 0.45 + cardMargin));
+                    const oldActive = $('.develop__card.active').index();
+                    const lastIndex = cardsCount - 1;
+                    const validatedIndex = newActive <= lastIndex ? newActive : lastIndex;
 
-        $(window).scroll(function () {
-            const initialOffset = $wrapper.get(0).offsetTop;
-            const $card = $('.develop__card');
-            const offsetTop = $sticky.get(0).offsetTop;
-            const scrollOffset = -offsetTop;
+                    if (oldActive !== validatedIndex) {
+                        $card.removeClass('active');
+                        $card.eq(validatedIndex).addClass('active');
+                    }
 
-            const cardsCount = $card.length;
-            const cardMargin = parseInt($card.css('marginRight'));
-            const newActive = Math.floor(Math.abs(scrollOffset) / ($card.outerWidth() * 0.45 + cardMargin));
-            const oldActive = $('.develop__card.active').index();
-            const lastIndex = cardsCount - 1;
-            const validatedIndex = newActive <= lastIndex ? newActive : lastIndex;
-
-            if (oldActive !== validatedIndex) {
-                $card.removeClass('active');
-                $card.eq(validatedIndex).addClass('active');
+                    $canvas.attr('style', `transform:translateX(${scrollOffset}px)`)
+                });
             }
+        }
 
-            $canvas.attr('style', `transform:translateX(${scrollOffset}px)`)
+        setTimeout(function () {
+            intiDimensions();
+        }, 100);
 
-                // if ($(window).width() <= 980) {
-                //     $card.removeClass('active');
-                    // $('.section-develop').style.height='auto'
-                // }
+        $(window).on('resize', function () {
+            intiDimensions();
         });
+
     }
 
     horScroll();

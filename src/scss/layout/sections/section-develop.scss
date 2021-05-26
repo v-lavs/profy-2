@@ -1,12 +1,10 @@
 .section-develop {
   background-color: $white;
   position: relative;
-  padding-bottom: 9%;
 
 
   .container-outer {
     top: 0;
-    padding-top: 100px;
     position: sticky;
     height: 100vh;
     width: 100%;
@@ -165,7 +163,6 @@
   }
 
   @media only screen and (max-width: 1661px) {
-    padding-bottom: 250px;
     .section__title {
       font-size: 45px;
 
@@ -193,9 +190,7 @@
     }
   }
   @include respond-to($xl) {
-    padding-bottom: 160px;
     .develop__card {
-      max-width: 550px;
       margin-right: 55px;
     }
     .card__title {
@@ -203,7 +198,6 @@
     }
   }
   @include respond-to($lg) {
-    height: auto !important;
     .container-outer {
       padding-top: 0;
       position: static;
@@ -283,7 +277,6 @@
     }
   }
   @include respond-to($sm) {
-    padding-bottom: 130px;
     .develop__card {
       width: 100%;
       padding-bottom: 57px;

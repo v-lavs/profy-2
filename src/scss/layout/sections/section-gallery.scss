@@ -14,6 +14,7 @@
     display: inline-block;
     vertical-align: middle;
     width: 50%;
+
     &:nth-child(1) {
       text-align: right;
       padding-right: 105px;
@@ -31,48 +32,55 @@
   }
 
   .card-gallery {
-    padding: 0 34px;
+    padding: 0 54px;
+    margin-bottom: 165px;
     width: 50%;
-    margin-bottom: 130px;
 
-    &:last-of-type {
-      margin-bottom: 0;
-    }
+    .inner {
+      overflow: hidden;
+      margin-bottom: 18px;
+      padding-top: 73.5%;
+      position: relative;
 
-    &_big {
-      width: 100%;
-    }
-
-    &__wrap-thumb {
-      padding-top: 80%;
       &_big {
         padding-top: 57%;
       }
     }
 
-    &__body {
-      padding: 0 0 30px;
-    }
-
     &__text {
-      opacity: .6;
+      color: #666666;
     }
 
-    &__title {
-      margin-bottom: 0;
+    &__wrap-thumb {
+      position: absolute;
+      width: 105%;
+      height: 105%;
+      top: -15px;
+      left: -15px;
     }
-    .inner{
-      overflow: hidden;
-      margin-bottom: 26px;
 
+    &__thumb {
+      &:hover,
+      &:focus {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+
+    &_big {
+      width: 100%;
+      margin-bottom: 75px;
     }
   }
 
+
   @include respond-to($lg) {
-    .card-gallery {
-      padding-left: 10px;
-      padding-right: 10px;
+    .card-gallery__list {
+      margin: 0 -25px;
     }
+    .card-gallery {
+      padding: 0 25px;
+    }
+
     .logo-link {
       &:nth-child(1) {
         padding-right: 55px;
@@ -132,7 +140,7 @@
   }
   @include respond-to($xs) {
     padding-top: 33px;
-    .block-logo{
+    .block-logo {
       margin-bottom: 50px;
     }
     .logo-link {
