@@ -2119,7 +2119,7 @@ body.modal-open {
   }
 
   .section-develop {
-    height: auto;
+    height: auto !important;
   }
 
   .section-develop .container-outer {
