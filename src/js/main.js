@@ -58,20 +58,24 @@ $(document).ready(function () {
         $('body').removeClass('modal-open')
     });
 
-    //SMOOTH SCROLL TO ANGKOR
+    // SMOOTH SCROLL TO ANCHOR
 
     function smoothScrollToAnchor(selector) {
         $(selector).on('click', function (event) {
-            let anchor = $.attr(this, 'href')
+            var anchor = $.attr(this, 'href');
+
             if (anchor.match(/^#/) && anchor !== '#') {
-                event.preventDefault()
-                let offsetSize = $("header").innerHeight();
+                event.preventDefault();
+
                 $('html, body').animate({
-                    scrollTop: $($.attr(this, 'href')).offset().top - offsetSize
-                }, 1500)
+                    scrollTop: $($.attr(this, 'href')).offset().top - 100
+                }, 1500);
             }
-        })
+        });
     }
+
+    smoothScrollToAnchor('.scroll-down');
+    smoothScrollToAnchor('.menu .menu__item');
 
     // SLIDER-ACCORDION
 

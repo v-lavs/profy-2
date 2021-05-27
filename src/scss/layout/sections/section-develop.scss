@@ -198,7 +198,7 @@
     }
   }
   @include respond-to($lg) {
-    .container-outer {
+      .container-outer {
       padding-top: 0;
       position: static;
       height: auto;
