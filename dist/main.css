@@ -2470,6 +2470,19 @@ body.modal-open {
     margin-bottom: 7px;
   }
 
+  .contact-btn {
+    position: fixed;
+    bottom: 28px;
+    top: auto;
+    z-index: 300;
+  }
+
+  .contact-btn.sticky {
+    position: fixed;
+    top: auto;
+    bottom: 28px;
+  }
+
   .form {
     font-size: 17px;
   }
@@ -2508,11 +2521,14 @@ body.modal-open {
 
   .contact-side-form .form__footer {
     padding-left: 0;
+    padding-top: 5px;
+    justify-content: center;
   }
 
   .contact-side-form .contact-side-form__footer {
     flex-wrap: wrap;
     text-align: center;
+    display: none;
   }
 
   .contact-side-form .phone-link {
@@ -2536,6 +2552,10 @@ body.modal-open {
   .contact-side-form .form .brief:before,
   .contact-side-form .form .link-presentation:before {
     left: 10px;
+  }
+
+  .contact-side-form .form .wrap-link {
+    padding-top: 46px;
   }
 
   .section-banner .banner__slide .btn {
@@ -2882,8 +2902,8 @@ body.modal-open {
 
 @media only screen and (max-width: 480px) {
   .contact-btn {
-    width: 57px;
-    height: 57px;
+    width: 67px;
+    height: 67px;
     right: 12px;
   }
 

@@ -92,7 +92,7 @@
   }
 
   .dropdown {
-   margin-left: 40px;
+    margin-left: 40px;
   }
 
   .phone-link {
@@ -112,10 +112,13 @@
 
     .form__footer {
       padding-left: 0;
+      padding-top: 5px;
+      justify-content: center;
     }
     .contact-side-form__footer {
       flex-wrap: wrap;
       text-align: center;
+      display: none;
     }
     .phone-link {
       margin-right: 20px;
@@ -137,8 +140,11 @@
       .link-presentation:before {
         left: 10px;
       }
-    }
 
+      .wrap-link {
+        padding-top: 46px;
+      }
+    }
   }
   @include respond-to($xs) {
     padding-left: 25px;
@@ -154,10 +160,10 @@
     }
   }
   @media only screen and (max-width: 360px) {
-    .form{
+    .form {
       .link-presentation,
       .dropdown,
-      .brief{
+      .brief {
         width: 100%;
         text-align: center;
       }

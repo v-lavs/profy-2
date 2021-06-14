@@ -155,9 +155,9 @@ $(document).ready(function () {
         },
         on: {
             slideChange: function () {
-                setTimeout(()=> {
+                setTimeout(() => {
 
-                console.log('slideChange');
+                    console.log('slideChange');
                     console.log(BackgroundCheck.getImageData());
                     BackgroundCheck.refresh();
                 }, 1000)
@@ -238,7 +238,6 @@ $(document).ready(function () {
     });
 
     //STICKY BTN
-
     var sticky = new Waypoint({
         element: $('#triggerBtnSticky')[0],
         offset: '50%',
@@ -292,7 +291,7 @@ $(document).ready(function () {
             } else {
                 const vw = window.innerWidth;
                 const vh = window.innerHeight;
-                const canvasWidth = $canvas.get(0).scrollWidth + vh - $('.develop__card').width() ;
+                const canvasWidth = $canvas.get(0).scrollWidth + vh - $('.develop__card').width();
                 $wrapper.height(canvasWidth);
                 $(window).scroll(function () {
                     const $card = $('.develop__card');
@@ -331,7 +330,7 @@ $(document).ready(function () {
     var waypoints = $('.section-develop .section__title').waypoint(function (direction) {
         if (direction === "up") {
             $(this.element).removeClass('active');
-                    } else{
+        } else {
             $(this.element).addClass('active');
         }
     }, {
