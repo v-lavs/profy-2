@@ -227,7 +227,11 @@
           }
         }
       }
-
+        .section__title {
+          &.active{
+            opacity: 1;
+          }
+        }
       .container-sticky {
         position: relative;
         left: 0;

@@ -95,12 +95,14 @@
     }
     .address {
       font-size: 17px;
+
       .link-phone {
         font-size: 37px;
 
       }
+
       &__item:nth-child(1),
-      &__item:nth-child(3){
+      &__item:nth-child(3) {
         margin-bottom: 17px;
       }
     }
@@ -108,14 +110,24 @@
     .dropdown {
       display: none;
     }
-    .field-box{
+    .field-box {
       margin-bottom: 38px;
     }
-    .form__footer{
+    .form__footer {
       padding: 0;
-      .wrap-btn{
+
+      .wrap-btn {
         text-align: center;
       }
+    }
+  }
+
+  @media only screen and (max-width: 360px) {
+    .address .link-phone {
+      font-size: 32px;
+    }
+    .bold {
+      font-size: 42px;
     }
   }
 }
