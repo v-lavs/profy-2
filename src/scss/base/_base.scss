@@ -121,9 +121,8 @@ body {
   position: absolute;
   right: 50px;
   top: 30%;
-  width: 73px;
-  height: 73px;
-  //background-color: $light-grey;
+  width: 90px;
+  height: 90px;
   background-color: transparent;
   border-radius: 50%;
   overflow: hidden;
@@ -169,7 +168,7 @@ body {
     }
   }
 
-  @include respond-to($xxl) {
+  @include respond-to($lg) {
     width: 76px;
     height: 76px;
     right: 30px;

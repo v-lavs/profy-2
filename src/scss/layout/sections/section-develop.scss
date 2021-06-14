@@ -35,6 +35,11 @@
 
   .section__title {
     width: 33%;
+    opacity: 1;
+    transition: opacity .35s;
+    &.active{
+      opacity: 0;
+    }
   }
 
   .develop {

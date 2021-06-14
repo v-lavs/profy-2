@@ -91,6 +91,10 @@
     }
   }
 
+  .dropdown {
+   margin-left: 40px;
+  }
+
   .phone-link {
     font-size: 22px;
   }
@@ -125,7 +129,6 @@
 
       .brief,
       .link-presentation {
-        min-width: 147px;
         text-align: left;
         margin-bottom: 16px;
       }
@@ -137,9 +140,27 @@
     }
 
   }
-  @include respond-to($xs){
-    &__wrap-link{
+  @include respond-to($xs) {
+    padding-left: 25px;
+    padding-right: 25px;
+    .form .wrap-link {
       flex-wrap: wrap;
+    }
+    .link-presentation {
+      min-width: 165px;
+    }
+    .form .brief {
+      min-width: 120px;
+    }
+  }
+  @media only screen and (max-width: 360px) {
+    .form{
+      .link-presentation,
+      .dropdown,
+      .brief{
+        width: 100%;
+        text-align: center;
+      }
     }
   }
 }

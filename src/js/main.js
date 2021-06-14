@@ -327,4 +327,14 @@ $(document).ready(function () {
 
     horScroll();
 
+
+    var waypoints = $('.section-develop .section__title').waypoint(function (direction) {
+        if (direction === "up") {
+            $(this.element).removeClass('active');
+                    } else{
+            $(this.element).addClass('active');
+        }
+    }, {
+        offset: '10%'
+    });
 });
