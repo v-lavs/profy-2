@@ -9,6 +9,7 @@
 body {
   font: 400 1em $main-font;
   color: $dark;
+  font-feature-settings: 'pnum' on, 'lnum' on;
   @include respond-to($md) {
     font-size: 16px;
     line-height: 1.5;
@@ -122,11 +123,19 @@ body {
   top: 30%;
   width: 73px;
   height: 73px;
-  background-color: $light-grey;
+  //background-color: $light-grey;
+  background-color: transparent;
   border-radius: 50%;
   overflow: hidden;
   border: none;
   z-index: 300;
+  &.ui.background--dark {
+    filter: invert(1);
+  }
+
+  &.ui.background--white {
+    filter: invert(0);
+  }
 
   &.sticky {
     position: fixed;
@@ -140,6 +149,7 @@ body {
     animation: spin 4s linear infinite;
     width: 100%;
     height: auto;
+
   }
 
   .wrap-img-written {

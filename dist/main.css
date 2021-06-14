@@ -121,6 +121,7 @@ a:hover {
 body {
   font: 400 1em "Raleway", sans-serif;
   color: #000000;
+  font-feature-settings: 'pnum' on, 'lnum' on;
 }
 
 body.modal-open {
@@ -190,11 +191,19 @@ body.modal-open {
   top: 30%;
   width: 73px;
   height: 73px;
-  background-color: #f9f9f9;
+  background-color: transparent;
   border-radius: 50%;
   overflow: hidden;
   border: none;
   z-index: 300;
+}
+
+.contact-btn.ui.background--dark {
+  filter: invert(1);
+}
+
+.contact-btn.ui.background--white {
+  filter: invert(0);
 }
 
 .contact-btn.sticky {
@@ -691,7 +700,7 @@ body.modal-open {
   height: 100vh;
   background-color: #ffffff;
   padding: 50px 63px 58px 58px;
-  z-index: 700;
+  z-index: 770;
   overflow-y: scroll;
   transform: translateX(100%);
   transition: transform .5s;
@@ -773,7 +782,6 @@ body.modal-open {
 
 .contact-side-form .form .wrap-link {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 98px;
 }
@@ -1197,6 +1205,7 @@ body.modal-open {
   color: #000000;
   line-height: .8;
   margin-bottom: 10px;
+  font-feature-settings: 'pnum' on, 'lnum' on;
 }
 
 .section-contacts .form .field-box {
@@ -2872,6 +2881,10 @@ body.modal-open {
   .contact-btn .wrap-img-written {
     -webkit-background-size: 18px;
     background-size: 18px;
+  }
+
+  .contact-side-form__wrap-link {
+    flex-wrap: wrap;
   }
 
   .section-gallery {
